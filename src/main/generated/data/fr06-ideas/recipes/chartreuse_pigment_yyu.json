@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "chartreuse_pigment",
+  "ingredients": [
+    {
+      "item": "fr06-ideas:yellow_pigment"
+    },
+    {
+      "item": "fr06-ideas:yellow_pigment"
+    },
+    {
+      "item": "fr06-ideas:ultramarine_pigment"
+    }
+  ],
+  "result": {
+    "item": "fr06-ideas:chartreuse_pigment"
+  }
+}

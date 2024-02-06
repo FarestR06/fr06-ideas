@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blazelite_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fr06-ideas:blazelite_ingot"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:spring_green_pigment_gu"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blazelite_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:spring_green_pigment_gu"
+    ]
+  }
+}

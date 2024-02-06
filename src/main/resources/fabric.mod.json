@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "fr06-ideas",
+  "version": "${version}",
+  "name": "Farest's Ideas",
+  "description": "A mod featuring ideas I was experimenting with :-)",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/fr06-ideas/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.farestr06.ideas.client.FarestsIdeasClient"
+    ],
+    "main": [
+      "com.farestr06.ideas.FarestsIdeas"
+    ],
+    "fabric-datagen": [
+      "com.farestr06.ideas.FarestsIdeasDataGenerator"
+    ]
+  },
+  "mixins": [
+    "fr06-ideas.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

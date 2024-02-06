@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fr06-ideas:violet_blazelite_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_violet_blazelite_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fr06-ideas:violet_blazelite_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_violet_blazelite_block"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fr06-ideas:violet_blazelite_bricks"
+    ]
+  }
+}

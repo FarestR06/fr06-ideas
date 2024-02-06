@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "fr06-ideas:block/spring_green_blazelite_pressure_plate"
+    },
+    "powered=true": {
+      "model": "fr06-ideas:block/spring_green_blazelite_pressure_plate_down"
+    }
+  }
+}

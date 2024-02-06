@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "fr06-ideas:blazelite_block"
+    }
+  ],
+  "result": {
+    "item": "fr06-ideas:blazelite_button"
+  }
+}

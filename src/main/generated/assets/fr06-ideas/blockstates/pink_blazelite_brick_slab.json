@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "fr06-ideas:block/pink_blazelite_brick_slab"
+    },
+    "type=double": {
+      "model": "fr06-ideas:block/pink_blazelite_bricks"
+    },
+    "type=top": {
+      "model": "fr06-ideas:block/pink_blazelite_brick_slab_top"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.farestr06.ideas.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "DamageEnchantMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

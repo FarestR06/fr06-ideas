@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "fr06-ideas:block/orange_blazelite_block"
+  }
+}

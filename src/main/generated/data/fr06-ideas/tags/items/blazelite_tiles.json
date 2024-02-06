@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "fr06-ideas:blazelite_tiles",
+    "fr06-ideas:capri_blazelite_tiles",
+    "fr06-ideas:chartreuse_blazelite_tiles",
+    "fr06-ideas:cyan_blazelite_tiles",
+    "fr06-ideas:dark_gray_blazelite_tiles",
+    "fr06-ideas:green_blazelite_tiles",
+    "fr06-ideas:light_gray_blazelite_tiles",
+    "fr06-ideas:magenta_blazelite_tiles",
+    "fr06-ideas:orange_blazelite_tiles",
+    "fr06-ideas:pink_blazelite_tiles",
+    "fr06-ideas:red_blazelite_tiles",
+    "fr06-ideas:rose_blazelite_tiles",
+    "fr06-ideas:spring_green_blazelite_tiles",
+    "fr06-ideas:ultramarine_blazelite_tiles",
+    "fr06-ideas:violet_blazelite_tiles",
+    "fr06-ideas:white_blazelite_tiles",
+    "fr06-ideas:yellow_blazelite_tiles"
+  ]
+}

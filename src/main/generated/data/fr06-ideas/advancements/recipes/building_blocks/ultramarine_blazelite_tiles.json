@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "fr06-ideas:ultramarine_blazelite_tiles"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_ultramarine_blazelite_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fr06-ideas:ultramarine_blazelite_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_ultramarine_blazelite_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "fr06-ideas:ultramarine_blazelite_tiles"
+    ]
+  }
+}
