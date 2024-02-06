@@ -1,4 +1,4 @@
-// 1.20.4	2024-02-05T14:47:41.4581095	Farest's Ideas/Block Loot Tables
+// 1.20.4	2024-02-06T12:12:25.0525417	Farest's Ideas/Block Loot Tables
 1074dcf530d5e726ae45b74cf47aa1ecb2112e33 data\fr06-ideas\loot_tables\blocks\red_blazelite_button.json
 dd4c626160f0f7ccc4c5fef121c0cabdeb15898f data\fr06-ideas\loot_tables\blocks\pink_blazelite_block.json
 7ddfb2f77beb8e180dcc7737f76888ee542d08b4 data\fr06-ideas\loot_tables\blocks\rose_blazelite_trapdoor.json
@@ -34,8 +34,8 @@ dc3a3c1ef2ead876eb1b89dc638d6873a4e74a81 data\fr06-ideas\loot_tables\blocks\mage
 872b9257360bd4db7fe5e34d3ec5e950e938a418 data\fr06-ideas\loot_tables\blocks\spring_green_blazelite_tile_fence.json
 12950d108aac3d55171bb16684eb7ffe7c2f21e4 data\fr06-ideas\loot_tables\blocks\yellow_blazelite_brick_slab.json
 ee8b5046610aaf2e8537e82f02a49cae4440e9f2 data\fr06-ideas\loot_tables\blocks\capri_blazelite_trapdoor.json
-4bd00bd93185a67b107e6b59d326a11bf81afd40 data\fr06-ideas\loot_tables\blocks\magenta_blazelite_tile_fence.json
 8e5e26deab0d0c8ad6481bc76c089298d163cbb1 data\fr06-ideas\loot_tables\blocks\light_gray_blazelite_brick_slab.json
+4bd00bd93185a67b107e6b59d326a11bf81afd40 data\fr06-ideas\loot_tables\blocks\magenta_blazelite_tile_fence.json
 806eecc90e4138cd38be38fb94cf305f034538d5 data\fr06-ideas\loot_tables\blocks\rose_blazelite_brick_fence.json
 c96ea287be317e52472d7632939b622eca1b9089 data\fr06-ideas\loot_tables\blocks\capri_blazelite_stairs.json
 b22ffb6a214d0f7c850584261916486e55097dae data\fr06-ideas\loot_tables\blocks\violet_blazelite_brick_fence_gate.json
@@ -163,8 +163,8 @@ ae552387867421c879266b908e4845fb805c78db data\fr06-ideas\loot_tables\blocks\gree
 6fbfa195f4f8858faa3c9819f5d554080b53f66e data\fr06-ideas\loot_tables\blocks\blazelite_bricks.json
 f6b7f80bef88adf6c51eb13f6df1b38db0873f3a data\fr06-ideas\loot_tables\blocks\chartreuse_blazelite_fence.json
 2fe6336e65b965a574c2d46ff6b69762f41795f3 data\fr06-ideas\loot_tables\blocks\capri_blazelite_brick_fence.json
-e3d755bf335b5fcaa66f23f5e825f7dbe3e15fa2 data\fr06-ideas\loot_tables\blocks\ultramarine_blazelite_trapdoor.json
 492e5bd796d455175cf206db254e8cded841e937 data\fr06-ideas\loot_tables\blocks\violet_blazelite_brick_slab.json
+e3d755bf335b5fcaa66f23f5e825f7dbe3e15fa2 data\fr06-ideas\loot_tables\blocks\ultramarine_blazelite_trapdoor.json
 7b6592e12ebdb4a80ae83ce7e7414e3395ec0d40 data\fr06-ideas\loot_tables\blocks\red_blazelite_brick_fence.json
 d3cbae32973369a62e56057c04694dd861bf26f8 data\fr06-ideas\loot_tables\blocks\pink_blazelite_trapdoor.json
 8e5e26deab0d0c8ad6481bc76c089298d163cbb1 data\fr06-ideas\loot_tables\blocks\light_gray_blazelite_tile_slab.json
@@ -173,8 +173,8 @@ cd4f931c582960575253de1d7e5e2f6a3ba27f3b data\fr06-ideas\loot_tables\blocks\pink
 6777f5a52f01a04b95a3e1cc7dcf8e245bc8f959 data\fr06-ideas\loot_tables\blocks\violet_blazelite_tile_wall.json
 d3bf309e95f1533d8e8e126f01dbb6146bc111c0 data\fr06-ideas\loot_tables\blocks\white_blazelite_brick_slab.json
 8c0051423cdac0d31eec394d463542252c9101b1 data\fr06-ideas\loot_tables\blocks\rose_blazelite_door.json
-754117378a607d8031aac980503edc199a45c9ff data\fr06-ideas\loot_tables\blocks\magenta_blazelite_button.json
 bda7d40fefe0065f51cc96c52d206830b0846659 data\fr06-ideas\loot_tables\blocks\green_blazelite_wall.json
+754117378a607d8031aac980503edc199a45c9ff data\fr06-ideas\loot_tables\blocks\magenta_blazelite_button.json
 ba6da080244346fddb7f40a6f0d851a0cf2c130e data\fr06-ideas\loot_tables\blocks\chartreuse_blazelite_brick_fence.json
 8fef932722a8ec9bea80bc5dde0266da7782d83c data\fr06-ideas\loot_tables\blocks\magenta_blazelite_tile_wall.json
 e01e19b5688fef583e0dad9db76f644e7f4da7d6 data\fr06-ideas\loot_tables\blocks\chartreuse_blazelite_slab.json

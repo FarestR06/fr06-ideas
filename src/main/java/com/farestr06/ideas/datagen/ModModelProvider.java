@@ -70,6 +70,8 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
     private static void generateBlazeliteModels(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VOID_BLOCK);
+
         BlockStateModelGenerator.BlockTexturePool blazeliteBlockPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLAZELITE_BLOCK);
         BlockStateModelGenerator.BlockTexturePool blazeliteBrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLAZELITE_BRICKS);
         BlockStateModelGenerator.BlockTexturePool blazeliteTilePool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLAZELITE_TILES);

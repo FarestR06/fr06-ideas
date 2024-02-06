@@ -1,6 +1,7 @@
 package com.farestr06.ideas.block;
 
 import com.farestr06.ideas.FarestsIdeas;
+import com.farestr06.ideas.block.custom.VoidBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -17,8 +18,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
-// Blazelite
-    // Basic
+    public static final Block VOID_BLOCK = registerBlock("void_block",
+            new VoidBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.SOUL_SAND).strength(0.5f, 1111.1f).instrument(Instrument.DRAGON).collidable(false).emissiveLighting(Blocks::always).replaceable()));
+
+    // Blazelite
     public static final Block BLAZELITE_BLOCK = registerBlock("blazelite_block",
             new Block(FabricBlockSettings.copyOf(Blocks.TERRACOTTA).sounds(BlockSoundGroup.BONE).strength(10.0f, 240.0f).instrument(Instrument.PLING)));
     public static final Block BLAZELITE_STAIRS = registerBlock("blazelite_stairs",
