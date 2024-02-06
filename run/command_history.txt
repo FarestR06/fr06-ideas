@@ -1,3 +1,0 @@
-/enchant @s minecraft:sharpness 5
-/enchant Player432 minecraft:fortune 3
-/enchant @s minecraft:efficiency 5
