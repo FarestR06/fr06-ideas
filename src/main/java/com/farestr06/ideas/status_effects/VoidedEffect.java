@@ -13,19 +13,13 @@ public class VoidedEffect extends StatusEffect {
         );
     }
 
-    @Override
-    public void onApplied(LivingEntity entity, int amplifier) {
-        super.onApplied(entity, amplifier);
-        entity.damage(ModDamageTypes.of(entity.getWorld(), ModDamageTypes.VOIDED), (0.75f*(amplifier+1)));
-    }
-
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         super.applyUpdateEffect(entity, amplifier);
-        entity.damage(ModDamageTypes.of(entity.getWorld(), ModDamageTypes.VOIDED), ((amplifier + 1)*0.8f));
+        entity.damage(ModDamageTypes.of(entity.getWorld(), ModDamageTypes.VOIDED), ((amplifier + 1)));
     }
 
     public boolean canApplyUpdateEffect(int duration, int amplifier) {
-        int i = 30 >> amplifier;
+        int i = 10 >> amplifier;
         if (i > 0) {
             return duration % i == 0;
         } else {

@@ -1,4 +1,6 @@
 {
+  "death.attack.voided": "%1$s was annihilated by the void",
+
   "item.fr06-ideas.blazelite_ingot": "Blazelite Ingot",
   "item.fr06-ideas.oil_ball": "Oil Ball",
   "item.fr06-ideas.salt": "Salt",
@@ -6,17 +8,18 @@
 
   "item.fr06-ideas.coffee_berries": "Haste Berries",
   "item.fr06-ideas.shrinkweed": "Shrinkweed",
+
   "effect.fr06-ideas.rush": "Rush",
   "effect.fr06-ideas.crash": "Crash",
+  "effect.fr06-ideas.voided": "Voided",
   "effect.fr06-ideas.small": "Small",
+
   "item.minecraft.potion.effect.rush": "Potion of the Brew Master",
   "item.minecraft.splash_potion.effect.rush": "Splash Potion of the Brew Master",
   "item.minecraft.lingering_potion.effect.rush": "Lingering Potion of the Brew Master",
   "item.minecraft.potion.effect.small": "Potion of Miniaturization",
   "item.minecraft.splash_potion.effect.small": "Splash Potion of Miniaturization",
   "item.minecraft.lingering_potion.effect.small": "Lingering Potion of Miniaturization",
-
-  "effect.fr06-ideas.voided": "Voided",
 
   "item.fr06-ideas.white_pigment": "White Pigment",
   "item.fr06-ideas.light_gray_pigment": "Light Gray Pigment",

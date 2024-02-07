@@ -18,6 +18,9 @@ import net.minecraft.world.World;
 
 public class VoidBlock extends Block {
 
+    private final StatusEffectInstance voided = new StatusEffectInstance
+            (ModStatusEffects.VOIDED, 200, 0);
+
     public VoidBlock(Settings settings) {
         super(settings);
     }
@@ -30,8 +33,7 @@ public class VoidBlock extends Block {
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         super.onEntityCollision(state, world, pos, entity);
         if(entity instanceof LivingEntity){
-            ((LivingEntity) entity).addStatusEffect(new StatusEffectInstance
-                    (ModStatusEffects.VOIDED, 200, 0));
+            ((LivingEntity) entity).addStatusEffect(voided);
         }else if (entity instanceof ItemEntity){
             entity.damage(ModDamageTypes.of(entity.getWorld(), ModDamageTypes.VOIDED), 5);
         }
