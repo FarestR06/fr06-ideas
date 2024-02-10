@@ -14,12 +14,21 @@
   "effect.fr06-ideas.voided": "Voided",
   "effect.fr06-ideas.small": "Small",
 
+  "item.fr06-ideas.blazelite_sword": "Blazelite Sword",
+  "item.fr06-ideas.blazelite_shovel": "Blazelite Shovel",
+  "item.fr06-ideas.blazelite_pickaxe": "Blazelite Pickaxe",
+  "item.fr06-ideas.blazelite_axe": "Blazelite Axe",
+  "item.fr06-ideas.blazelite_hoe": "Blazelite Hoe",
+
   "item.minecraft.potion.effect.rush": "Potion of the Brew Master",
   "item.minecraft.splash_potion.effect.rush": "Splash Potion of the Brew Master",
   "item.minecraft.lingering_potion.effect.rush": "Lingering Potion of the Brew Master",
   "item.minecraft.potion.effect.small": "Potion of Miniaturization",
   "item.minecraft.splash_potion.effect.small": "Splash Potion of Miniaturization",
   "item.minecraft.lingering_potion.effect.small": "Lingering Potion of Miniaturization",
+  "item.minecraft.potion.effect.dragon": "Potion of the Dragon",
+  "item.minecraft.splash_potion.effect.dragon": "Splash Potion of the Dragon",
+  "item.minecraft.lingering_potion.effect.dragon": "Lingering Potion of the Dragon",
 
   "item.fr06-ideas.white_pigment": "White Pigment",
   "item.fr06-ideas.light_gray_pigment": "Light Gray Pigment",

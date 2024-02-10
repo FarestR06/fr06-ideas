@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
@@ -20,6 +21,9 @@ public class ModItems {
     public static final Item COFFEE_BERRIES = registerItem("coffee_berries", new Item(new FabricItemSettings().food(ModFoodComponents.COFFEE_BERRIES)));
     public static final Item SHRINKWEED = registerItem("shrinkweed", new Item(new FabricItemSettings().food(ModFoodComponents.SHRINKWEED)));
 
+    // BREWING ITEMS
+    public static final Item BOTTLE_OF_VOID = registerItem("void", new Item(new FabricItemSettings()));
+
     // Blazelite Tools
     public static final Item BLAZELITE_SWORD = registerItem("blazelite_sword", new SwordItem
             (ModToolMaterial.BLAZELITE, 3, -2.8f, new FabricItemSettings()));
@@ -30,28 +34,37 @@ public class ModItems {
     public static final Item BLAZELITE_AXE = registerItem("blazelite_axe", new AxeItem
             (ModToolMaterial.BLAZELITE, 6.0f, -2.8f, new FabricItemSettings()));
     public static final Item BLAZELITE_HOE = registerItem("blazelite_hoe", new HoeItem
-            (ModToolMaterial.BLAZELITE, 3, -2.8f, new FabricItemSettings()));
+                    (ModToolMaterial.BLAZELITE, 3, -2.8f, new FabricItemSettings()));
+
+    public static final Item BLAZELITE_HELMET = registerItem("blazelite_helmet", new DyeableArmorItem
+            (ModArmorMaterials.BLAZELITE, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item BLAZELITE_CHESTPLATE = registerItem("blazelite_chestplate", new DyeableArmorItem
+            (ModArmorMaterials.BLAZELITE, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item BLAZELITE_LEGGINGS = registerItem("blazelite_leggings", new DyeableArmorItem
+            (ModArmorMaterials.BLAZELITE, ArmorItem.Type.HELMET, new FabricItemSettings()));
+    public static final Item BLAZELITE_BOOTS = registerItem("blazelite_boots", new DyeableArmorItem
+            (ModArmorMaterials.BLAZELITE, ArmorItem.Type.HELMET, new FabricItemSettings()));
 
     // Blazelite Items
     public static final Item BLAZELITE_INGOT = registerItem("blazelite_ingot", new Item(new FabricItemSettings()));
     public static final Item OIL_BALL = registerItem("oil_ball", new Item(new FabricItemSettings()));
     public static final Item SALT = registerItem("salt", new SaltItem(new FabricItemSettings()));
-    public static final Item WHITE_PIGMENT = registerItem("white_pigment", new Item(new FabricItemSettings()));
-    public static final Item LIGHT_GRAY_PIGMENT = registerItem("light_gray_pigment", new Item(new FabricItemSettings()));
-    public static final Item DARK_GRAY_PIGMENT = registerItem("dark_gray_pigment", new Item(new FabricItemSettings()));
-    public static final Item RED_PIGMENT = registerItem("red_pigment", new Item(new FabricItemSettings()));
-    public static final Item ORANGE_PIGMENT = registerItem("orange_pigment", new Item(new FabricItemSettings()));
-    public static final Item YELLOW_PIGMENT = registerItem("yellow_pigment", new Item(new FabricItemSettings()));
-    public static final Item CHARTREUSE_PIGMENT = registerItem("chartreuse_pigment", new Item(new FabricItemSettings()));
-    public static final Item GREEN_PIGMENT = registerItem("green_pigment", new Item(new FabricItemSettings()));
-    public static final Item SPRING_GREEN_PIGMENT = registerItem("spring_green_pigment", new Item(new FabricItemSettings()));
-    public static final Item CYAN_PIGMENT = registerItem("cyan_pigment", new Item(new FabricItemSettings()));
-    public static final Item CAPRI_PIGMENT = registerItem("capri_pigment", new Item(new FabricItemSettings()));
-    public static final Item ULTRAMARINE_PIGMENT = registerItem("ultramarine_pigment", new Item(new FabricItemSettings()));
-    public static final Item VIOLET_PIGMENT = registerItem("violet_pigment", new Item(new FabricItemSettings()));
-    public static final Item MAGENTA_PIGMENT = registerItem("magenta_pigment", new Item(new FabricItemSettings()));
-    public static final Item PINK_PIGMENT = registerItem("pink_pigment", new Item(new FabricItemSettings()));
-    public static final Item ROSE_PIGMENT = registerItem("rose_pigment", new Item(new FabricItemSettings()));
+    public static final DyeItem WHITE_PIGMENT = (DyeItem) registerItem("white_pigment", new DyeItem(DyeColor.valueOf("WHITE_PIGMENT"), new FabricItemSettings()));
+    public static final Item LIGHT_GRAY_PIGMENT = registerItem("light_gray_pigment", new DyeItem(DyeColor.valueOf("LIGHT_GRAY_PIGMENT"), new FabricItemSettings()));
+    public static final Item DARK_GRAY_PIGMENT = registerItem("dark_gray_pigment", new DyeItem(DyeColor.valueOf("DARK_GRAY_PIGMENT"), new FabricItemSettings()));
+    public static final Item RED_PIGMENT = registerItem("red_pigment", new DyeItem(DyeColor.valueOf("RED_PIGMENT"), new FabricItemSettings()));
+    public static final Item ORANGE_PIGMENT = registerItem("orange_pigment", new DyeItem(DyeColor.valueOf("ORANGE_PIGMENT"), new FabricItemSettings()));
+    public static final Item YELLOW_PIGMENT = registerItem("yellow_pigment", new DyeItem(DyeColor.valueOf("YELLOW"), new FabricItemSettings()));
+    public static final Item CHARTREUSE_PIGMENT = registerItem("chartreuse_pigment", new DyeItem(DyeColor.valueOf("CHARTREUSE_PIGMENT"), new FabricItemSettings()));
+    public static final Item GREEN_PIGMENT = registerItem("green_pigment", new DyeItem(DyeColor.valueOf("GREEN_PIGMENT"), new FabricItemSettings()));
+    public static final Item SPRING_GREEN_PIGMENT = registerItem("spring_green_pigment", new DyeItem(DyeColor.valueOf("SPRING_GREEN_PIGMENT"), new FabricItemSettings()));
+    public static final Item CYAN_PIGMENT = registerItem("cyan_pigment", new DyeItem(DyeColor.valueOf("CYAN_PIGMENT"), new FabricItemSettings()));
+    public static final Item CAPRI_PIGMENT = registerItem("capri_pigment", new DyeItem(DyeColor.valueOf("CAPRI_PIGMENT"), new FabricItemSettings()));
+    public static final Item ULTRAMARINE_PIGMENT = registerItem("ultramarine_pigment", new DyeItem(DyeColor.valueOf("ULTRAMARINE_PIGMENT"), new FabricItemSettings()));
+    public static final Item VIOLET_PIGMENT = registerItem("violet_pigment", new DyeItem(DyeColor.valueOf("VIOLET_PIGMENT"), new FabricItemSettings()));
+    public static final Item MAGENTA_PIGMENT = registerItem("magenta_pigment", new DyeItem(DyeColor.valueOf("MAGENTA_PIGMENT"), new FabricItemSettings()));
+    public static final Item PINK_PIGMENT = registerItem("pink_pigment", new DyeItem(DyeColor.valueOf("PINK_PIGMENT"), new FabricItemSettings()));
+    public static final Item ROSE_PIGMENT = registerItem("rose_pigment", new DyeItem(DyeColor.valueOf("ROSE_PIGMENT"), new FabricItemSettings()));
 
     private static void addItemsToFoodAndDrinkItemGroup(FabricItemGroupEntries entries) {
         entries.add(COFFEE_BERRIES);
@@ -65,6 +78,10 @@ public class ModItems {
     }
     private static void addItemsToCombatItemGroup(FabricItemGroupEntries entries) {
         entries.add(BLAZELITE_SWORD);
+        entries.add(BLAZELITE_HELMET);
+        entries.add(BLAZELITE_CHESTPLATE);
+        entries.add(BLAZELITE_LEGGINGS);
+        entries.add(BLAZELITE_BOOTS);
     }
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {

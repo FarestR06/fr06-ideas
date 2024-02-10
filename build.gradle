@@ -26,6 +26,9 @@ repositories {
     // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
     // See https://docs.gradle.org/current/userguide/declaring_repositories.html
     // for more information about repositories.
+    maven {
+        url = "https://jitpack.io"
+    }
 }
 
 loom {
@@ -54,6 +57,18 @@ dependencies {
 
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    modApi("com.github.Virtuoel:Pehkui:${pehkui_version}", {
+        exclude group: "net.fabricmc.fabric-api"
+    })
+
+    // Manningham Mills. For tinkering with the enums.
+
+    includeMod "com.github.PlanetTeamSpeakk:Fabric-ASM:master-SNAPSHOT"
+}
+
+def includeMod(String dep) {
+    dependencies.modImplementation(dep)
+    dependencies.include(dep)
 }
 
 processResources {
