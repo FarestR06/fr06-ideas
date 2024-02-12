@@ -20,6 +20,9 @@ public class ModItems {
 
     public static final Item COFFEE_BERRIES = registerItem("coffee_berries", new Item(new FabricItemSettings().food(ModFoodComponents.COFFEE_BERRIES)));
     public static final Item SHRINKWEED = registerItem("shrinkweed", new Item(new FabricItemSettings().food(ModFoodComponents.SHRINKWEED)));
+    public static final Item LANTERNBERRY = registerItem("lanternberry", new Item(new FabricItemSettings().food(ModFoodComponents.LANTERNBERRY)));
+    public static final Item TEOSINTE = registerItem("teosinte", new Item(new FabricItemSettings().food(FoodComponents.BREAD)));
+    public static final Item ACORN = registerItem("acorn", new Item(new FabricItemSettings().food(ModFoodComponents.ACORN)));
 
     // BREWING ITEMS
     public static final Item BOTTLE_OF_VOID = registerItem("void", new Item(new FabricItemSettings()));
@@ -39,11 +42,11 @@ public class ModItems {
     public static final Item BLAZELITE_HELMET = registerItem("blazelite_helmet", new DyeableArmorItem
             (ModArmorMaterials.BLAZELITE, ArmorItem.Type.HELMET, new FabricItemSettings()));
     public static final Item BLAZELITE_CHESTPLATE = registerItem("blazelite_chestplate", new DyeableArmorItem
-            (ModArmorMaterials.BLAZELITE, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            (ModArmorMaterials.BLAZELITE, ArmorItem.Type.CHESTPLATE, new FabricItemSettings()));
     public static final Item BLAZELITE_LEGGINGS = registerItem("blazelite_leggings", new DyeableArmorItem
-            (ModArmorMaterials.BLAZELITE, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            (ModArmorMaterials.BLAZELITE, ArmorItem.Type.LEGGINGS, new FabricItemSettings()));
     public static final Item BLAZELITE_BOOTS = registerItem("blazelite_boots", new DyeableArmorItem
-            (ModArmorMaterials.BLAZELITE, ArmorItem.Type.HELMET, new FabricItemSettings()));
+            (ModArmorMaterials.BLAZELITE, ArmorItem.Type.BOOTS, new FabricItemSettings()));
 
     // Blazelite Items
     public static final Item BLAZELITE_INGOT = registerItem("blazelite_ingot", new Item(new FabricItemSettings()));
@@ -67,6 +70,8 @@ public class ModItems {
     public static final Item ROSE_PIGMENT = registerItem("rose_pigment", new DyeItem(DyeColor.valueOf("ROSE_PIGMENT"), new FabricItemSettings()));
 
     private static void addItemsToFoodAndDrinkItemGroup(FabricItemGroupEntries entries) {
+        entries.add(LANTERNBERRY);
+        entries.add(ACORN);
         entries.add(COFFEE_BERRIES);
         entries.add(SHRINKWEED);
     }

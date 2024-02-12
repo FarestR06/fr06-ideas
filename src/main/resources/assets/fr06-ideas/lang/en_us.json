@@ -1,6 +1,9 @@
 {
   "death.attack.voided": "%1$s was annihilated by the void",
 
+  "soul.fr06-ideas.cancelled.not_enough": "You may not do that now; you need more souls",
+  "soul.fr06-ideas.cancelled.error": "You may not do that now; the developer has mistakenly made doing so impossible",
+
   "item.fr06-ideas.blazelite_ingot": "Blazelite Ingot",
   "item.fr06-ideas.oil_ball": "Oil Ball",
   "item.fr06-ideas.salt": "Salt",
@@ -19,6 +22,10 @@
   "item.fr06-ideas.blazelite_pickaxe": "Blazelite Pickaxe",
   "item.fr06-ideas.blazelite_axe": "Blazelite Axe",
   "item.fr06-ideas.blazelite_hoe": "Blazelite Hoe",
+  "item.fr06-ideas.blazelite_boots": "Blazelite Boots",
+  "item.fr06-ideas.blazelite_chestplate": "Blazelite Cuirass",
+  "item.fr06-ideas.blazelite_helmet": "Blazelite Helmet",
+  "item.fr06-ideas.blazelite_leggings": "Blazelite Greaves",
 
   "item.minecraft.potion.effect.rush": "Potion of the Brew Master",
   "item.minecraft.splash_potion.effect.rush": "Splash Potion of the Brew Master",

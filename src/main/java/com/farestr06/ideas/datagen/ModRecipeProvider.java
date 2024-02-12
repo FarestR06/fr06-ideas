@@ -21,6 +21,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
 
+
+
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BLAZELITE_INGOT, 8)
                         .input(ModItems.OIL_BALL)
                         .input(ModItems.OIL_BALL)

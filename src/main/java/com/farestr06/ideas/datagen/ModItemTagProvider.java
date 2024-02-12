@@ -1,10 +1,12 @@
 package com.farestr06.ideas.datagen;
 
 import com.farestr06.ideas.block.ModBlocks;
+import com.farestr06.ideas.item.ModItems;
 import com.farestr06.ideas.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -16,6 +18,15 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
+        getOrCreateTagBuilder(ItemTags.SNIFFER_FOOD)
+                .add(ModItems.LANTERNBERRY);
+
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.BLAZELITE_BOOTS)
+                .add(ModItems.BLAZELITE_CHESTPLATE)
+                .add(ModItems.BLAZELITE_HELMET)
+                .add(ModItems.BLAZELITE_LEGGINGS);
+
         getOrCreateTagBuilder(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .add(ModBlocks.BLAZELITE_BLOCK.asItem())
                 .add(ModBlocks.CAPRI_BLAZELITE_BLOCK.asItem())

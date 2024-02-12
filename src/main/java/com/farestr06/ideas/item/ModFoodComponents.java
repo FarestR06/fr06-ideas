@@ -9,4 +9,8 @@ public class ModFoodComponents {
             .statusEffect(new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 100, 1), 0.15f)
             .build();
     public static final FoodComponent SHRINKWEED = new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 44, 4), 0.4f).build();
+
+    public static final FoodComponent LANTERNBERRY = new FoodComponent.Builder().hunger(2).saturationModifier(1.0f).build();
+    public static final FoodComponent ACORN = new FoodComponent.Builder().hunger(1).saturationModifier(0.1f).snack().build();
+
 }

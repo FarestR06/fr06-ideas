@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -43,6 +44,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BLAZELITE_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BLAZELITE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.BLAZELITE_SWORD, Models.HANDHELD);
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.BLAZELITE_BOOTS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.BLAZELITE_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.BLAZELITE_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.BLAZELITE_LEGGINGS);
     }
 
     @Override
