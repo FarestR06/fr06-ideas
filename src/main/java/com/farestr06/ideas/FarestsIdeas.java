@@ -21,7 +21,6 @@ public class FarestsIdeas implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        LOGGER.info("Lessgo dababy!!");
 
         ModScaleTypes.registerModScaleTypes();
         ModStatusEffects.registerModStatusEffects();
@@ -34,4 +33,5 @@ public class FarestsIdeas implements ModInitializer {
         ModBlocks.registerModBlocks();
 
     }
+
 }

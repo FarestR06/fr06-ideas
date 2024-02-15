@@ -1,4 +1,7 @@
 {
+  "dataPack.blazelite.description": "Blazelite",
+  "subtitles.item.armor.equip_blazelite": "Blazelite armor thunks",
+
   "death.attack.voided": "%1$s was annihilated by the void",
 
   "soul.fr06-ideas.cancelled.not_enough": "You may not do that now; you need more souls",
@@ -11,6 +14,8 @@
 
   "item.fr06-ideas.coffee_berries": "Haste Berries",
   "item.fr06-ideas.shrinkweed": "Shrinkweed",
+  "item.fr06-ideas.acorn": "Acorn",
+  "item.fr06-ideas.lanternberry": "Lanternberry",
 
   "effect.fr06-ideas.rush": "Rush",
   "effect.fr06-ideas.crash": "Crash",
@@ -27,15 +32,18 @@
   "item.fr06-ideas.blazelite_helmet": "Blazelite Helmet",
   "item.fr06-ideas.blazelite_leggings": "Blazelite Greaves",
 
-  "item.minecraft.potion.effect.rush": "Potion of the Brew Master",
-  "item.minecraft.splash_potion.effect.rush": "Splash Potion of the Brew Master",
-  "item.minecraft.lingering_potion.effect.rush": "Lingering Potion of the Brew Master",
+  "item.minecraft.potion.effect.haste": "Potion of Celerity",
+  "item.minecraft.splash_potion.effect.haste": "Splash Potion of Celerity",
+  "item.minecraft.lingering_potion.effect.haste": "Lingering Potion of Celerity",
+  "item.minecraft.tipped_arrow.effect.haste": "Arrow of Celerity",
   "item.minecraft.potion.effect.small": "Potion of Miniaturization",
   "item.minecraft.splash_potion.effect.small": "Splash Potion of Miniaturization",
   "item.minecraft.lingering_potion.effect.small": "Lingering Potion of Miniaturization",
+  "item.minecraft.tipped_arrow.effect.small": "Arrow of Miniaturization",
   "item.minecraft.potion.effect.dragon": "Potion of the Dragon",
   "item.minecraft.splash_potion.effect.dragon": "Splash Potion of the Dragon",
   "item.minecraft.lingering_potion.effect.dragon": "Lingering Potion of the Dragon",
+  "item.minecraft.tipped_arrow.effect.dragon": "Arrow of the Dragon",
 
   "item.fr06-ideas.white_pigment": "White Pigment",
   "item.fr06-ideas.light_gray_pigment": "Light Gray Pigment",

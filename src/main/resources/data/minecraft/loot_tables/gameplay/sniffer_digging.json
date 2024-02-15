@@ -13,7 +13,8 @@
           "name": "minecraft:pitcher_pod"
         },
         {
-          "type": "fr06-ideas:lanternberry"
+          "type": "minecraft:item",
+          "name": "fr06-ideas:lanternberry"
         }
       ],
       "rolls": 1.0

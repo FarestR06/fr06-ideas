@@ -24,7 +24,7 @@ public class ModStatusEffects {
 
     public static final StatusEffect SMALL = registerStatusEffect("small", new SmallEffect());
     public static StatusEffect registerStatusEffect(String name, StatusEffect effect) {
-        return Registry.register(Registries.STATUS_EFFECT, new Identifier(FarestsIdeas.MOD_ID, name), effect);
+        return Registry.register(Registries.STATUS_EFFECT, FarestsIdeas.makeId(name), effect);
     }
 
     public static void registerModStatusEffects() {

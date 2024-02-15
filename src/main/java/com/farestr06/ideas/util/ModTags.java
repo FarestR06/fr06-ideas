@@ -16,7 +16,7 @@ public class ModTags {
         public static final TagKey<Block> BLAZELITE_TILES = createTag("blazelite_blocks");
 
         private static TagKey<Block> createTag(String name) {
-            return TagKey.of(RegistryKeys.BLOCK, new Identifier(FarestsIdeas.MOD_ID, name));
+            return TagKey.of(RegistryKeys.BLOCK, FarestsIdeas.makeId(name));
         }
 
     }

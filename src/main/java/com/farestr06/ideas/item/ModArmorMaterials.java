@@ -1,6 +1,7 @@
 package com.farestr06.ideas.item;
 
 import com.farestr06.ideas.FarestsIdeas;
+import com.farestr06.ideas.sound.ModSounds;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;
@@ -10,7 +11,7 @@ import net.minecraft.sound.SoundEvents;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    BLAZELITE("blazelite", 39, new int[] {3, 7, 6, 3}, 22, SoundEvents.ITEM_ARMOR_EQUIP_TURTLE, 0f, 0f, () -> Ingredient.ofItems(ModItems.BLAZELITE_INGOT))
+    BLAZELITE("blazelite", 39, new int[] {3, 7, 6, 3}, 22, ModSounds.ITEM_ARMOR_EQUIP_BLAZELITE, 0f, 0f, () -> Ingredient.ofItems(ModItems.BLAZELITE_INGOT))
     ;
 
     private final String name;

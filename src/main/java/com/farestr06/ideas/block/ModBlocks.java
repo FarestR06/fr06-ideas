@@ -1,6 +1,7 @@
 package com.farestr06.ideas.block;
 
 import com.farestr06.ideas.FarestsIdeas;
+import com.farestr06.ideas.block.custom.OakSaplingCropBlock;
 import com.farestr06.ideas.block.custom.VoidBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -20,6 +21,11 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 public class ModBlocks {
     public static final Block VOID_BLOCK = registerBlock("void_block",
             new VoidBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.SOUL_SAND).strength(0.5f, 1111.1f).instrument(Instrument.DRAGON).collidable(false).emissiveLighting(Blocks::always).replaceable()));
+
+    // Crops
+
+    public static final Block OAK_SAPLING_CROP = Registry.register(Registries.BLOCK, FarestsIdeas.makeId("oak_sapling_crop"),
+            new OakSaplingCropBlock(FabricBlockSettings.copyOf(Blocks.TORCHFLOWER_CROP)));
 
     // Blazelite
     public static final Block BLAZELITE_BLOCK = registerBlock("blazelite_block",
@@ -1088,11 +1094,11 @@ public class ModBlocks {
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, new Identifier(FarestsIdeas.MOD_ID, name), block);
+        return Registry.register(Registries.BLOCK, FarestsIdeas.makeId(name), block);
     }
 
     private static Item registerBlockItem(String name, Block block) {
-        return Registry.register(Registries.ITEM, new Identifier(FarestsIdeas.MOD_ID, name),
+        return Registry.register(Registries.ITEM, FarestsIdeas.makeId(name),
                 new BlockItem(block, new FabricItemSettings()));
     }
 

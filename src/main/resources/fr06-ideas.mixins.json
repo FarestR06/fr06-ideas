@@ -6,6 +6,7 @@
   "mixins": [
     "DamageEnchantMixin",
     "DragonFireballEntityMixin",
+    "FoodComponentsMixin",
     "ModEntityDataSaverMixin",
     "PlayerEntityMixin"
   ],

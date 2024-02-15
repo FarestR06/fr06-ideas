@@ -5,7 +5,9 @@ import com.farestr06.ideas.item.ModItems;
 import com.farestr06.ideas.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
@@ -21,7 +23,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.GOLDEN_ACORN, 1)
+                        .pattern("###")
+                        .pattern("#&#")
+                        .pattern("###")
+                        .input('#', Items.GOLD_NUGGET)
+                        .input('&', ModItems.ACORN)
+                        .criterion(hasItem(ModItems.ACORN), conditionsFromItem(ModItems.ACORN))
+                        .offerTo(exporter, new Identifier(getRecipeName(ModItems.GOLDEN_ACORN)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.ENCHANTED_GOLDEN_ACORN, 1)
+                        .pattern("###")
+                        .pattern("#&#")
+                        .pattern("###")
+                        .input('#', Blocks.GOLD_BLOCK)
+                        .input('&', ModItems.GOLDEN_ACORN)
+                        .criterion(hasItem(ModItems.GOLDEN_ACORN), conditionsFromItem(ModItems.GOLDEN_ACORN))
+                        .offerTo(exporter, new Identifier(getRecipeName(ModItems.ENCHANTED_GOLDEN_ACORN)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BLAZELITE_INGOT, 8)
                         .input(ModItems.OIL_BALL)

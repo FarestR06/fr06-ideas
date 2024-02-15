@@ -1,6 +1,7 @@
 package com.farestr06.ideas.datagen;
 
 import com.farestr06.ideas.block.ModBlocks;
+import com.farestr06.ideas.block.custom.OakSaplingCropBlock;
 import com.farestr06.ideas.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
@@ -19,6 +20,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SALT, Models.GENERATED);
         itemModelGenerator.register(ModItems.COFFEE_BERRIES, Models.GENERATED);
         itemModelGenerator.register(ModItems.SHRINKWEED, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.LANTERNBERRY, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.BLAZELITE_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.OIL_BALL, Models.GENERATED);
@@ -55,6 +58,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OILY_DEEPSLATE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSOIL);
+        blockStateModelGenerator.registerCrop(ModBlocks.OAK_SAPLING_CROP, OakSaplingCropBlock.AGE, 0,1,2,3);
 
         generateBlazeliteModels(blockStateModelGenerator);
         generateWhiteBlazeliteModels(blockStateModelGenerator);
