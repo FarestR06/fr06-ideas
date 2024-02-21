@@ -1,12 +1,15 @@
 package com.farestr06.ideas;
 
 import com.farestr06.ideas.block.ModBlocks;
+import com.farestr06.ideas.entity.ModEntities;
+import com.farestr06.ideas.entity.custom.CavefowlEntity;
 import com.farestr06.ideas.item.ModItemGroups;
 import com.farestr06.ideas.item.ModItems;
 import com.farestr06.ideas.item.potion.ModPotions;
 import com.farestr06.ideas.status_effects.ModStatusEffects;
 import com.farestr06.ideas.util.ModScaleTypes;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,6 +35,7 @@ public class FarestsIdeas implements ModInitializer {
         ModItems.registerModFuels();
         ModBlocks.registerModBlocks();
 
+        FabricDefaultAttributeRegistry.register(ModEntities.CAVEFOWL, CavefowlEntity.createCavefowlAttributes());
     }
 
 }

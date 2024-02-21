@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "fr06-ideas:item/blazelite_pickaxe"
+  }
+}

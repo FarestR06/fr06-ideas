@@ -29,6 +29,7 @@ public class VoidBlock extends Block {
         return VoxelShapes.fullCube();
     }
 
+    @SuppressWarnings("deprecation")
     @Override
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         super.onEntityCollision(state, world, pos, entity);

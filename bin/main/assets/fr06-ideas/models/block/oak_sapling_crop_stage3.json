@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "fr06-ideas:block/oak_sapling_crop_stage3"
+  }
+}

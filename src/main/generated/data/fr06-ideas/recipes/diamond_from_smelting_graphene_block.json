@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 1.8,
+  "group": "diamond",
+  "ingredient": {
+    "item": "fr06-ideas:graphene_block"
+  },
+  "result": "minecraft:diamond"
+}

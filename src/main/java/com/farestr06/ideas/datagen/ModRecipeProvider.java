@@ -1,5 +1,6 @@
 package com.farestr06.ideas.datagen;
 
+import com.farestr06.ideas.FarestsIdeas;
 import com.farestr06.ideas.block.ModBlocks;
 import com.farestr06.ideas.item.ModItems;
 import com.farestr06.ideas.util.ModTags;
@@ -12,7 +13,9 @@ import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.util.Identifier;
+import net.minecraft.registry.tag.ItemTags;
+
+import java.util.List;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
 
@@ -23,6 +26,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
 
+        offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.GRAPHITE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAPHITE_BLOCK);
+        offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAPHENE_BLOCK, ModBlocks.GRAPHITE_BLOCK);
+        offerSmelting(exporter, List.of(ModBlocks.GRAPHENE_BLOCK), RecipeCategory.MISC, Items.DIAMOND, 1.8f, 400, "diamond");
+        offerBlasting(exporter, List.of(ModBlocks.GRAPHENE_BLOCK), RecipeCategory.MISC, Items.DIAMOND, 1.8f, 200, "diamond");
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.GUNPOWDER, 9)
+                        .input(ItemTags.COALS)
+                        .input(Items.BLAZE_POWDER)
+                        .input(ModItems.SALTPETER)
+                        .criterion(hasItem(ModItems.SALTPETER), conditionsFromItem(ModItems.SALTPETER))
+                        .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(Items.GUNPOWDER)));
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.FIREWORK_ROCKET, 3)
+                        .input(Items.SUGAR)
+                        .input(ModItems.SALTPETER)
+                        .input(Items.PAPER)
+                        .criterion(hasItem(ModItems.SALTPETER), conditionsFromItem(ModItems.SALTPETER))
+                        .offerTo(exporter, FarestsIdeas.makeId("r_candy"));
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.GOLDEN_ACORN, 1)
                         .pattern("###")
                         .pattern("#&#")
@@ -30,7 +52,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('#', Items.GOLD_NUGGET)
                         .input('&', ModItems.ACORN)
                         .criterion(hasItem(ModItems.ACORN), conditionsFromItem(ModItems.ACORN))
-                        .offerTo(exporter, new Identifier(getRecipeName(ModItems.GOLDEN_ACORN)));
+                        .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModItems.GOLDEN_ACORN)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.ENCHANTED_GOLDEN_ACORN, 1)
                         .pattern("###")
@@ -39,7 +61,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('#', Blocks.GOLD_BLOCK)
                         .input('&', ModItems.GOLDEN_ACORN)
                         .criterion(hasItem(ModItems.GOLDEN_ACORN), conditionsFromItem(ModItems.GOLDEN_ACORN))
-                        .offerTo(exporter, new Identifier(getRecipeName(ModItems.ENCHANTED_GOLDEN_ACORN)));
+                        .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModItems.ENCHANTED_GOLDEN_ACORN)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BLAZELITE_INGOT, 8)
                         .input(ModItems.OIL_BALL)
@@ -48,7 +70,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input(Items.MAGMA_CREAM)
                         .criterion(hasItem(ModItems.OIL_BALL), conditionsFromItem(ModItems.OIL_BALL))
                         .criterion(hasItem(Items.MAGMA_CREAM), conditionsFromItem(Items.MAGMA_CREAM))
-                        .offerTo(exporter, new Identifier(getRecipeName(ModItems.OIL_BALL)));
+                        .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModItems.OIL_BALL)));
 
         offerPigmentRecipes(exporter);
         offerBlazeliteBlockRecipes(exporter);
@@ -71,97 +93,97 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.WHITE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.WHITE_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.WHITE_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.LIGHT_GRAY_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.LIGHT_GRAY_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.LIGHT_GRAY_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_GRAY_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.DARK_GRAY_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.DARK_GRAY_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.DARK_GRAY_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .input(ModItems.RED_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.RED_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.RED_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .input(ModItems.ORANGE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ORANGE_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.ORANGE_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .input(ModItems.YELLOW_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.YELLOW_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.YELLOW_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHARTREUSE_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .input(ModItems.CHARTREUSE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CHARTREUSE_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.CHARTREUSE_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .input(ModItems.GREEN_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GREEN_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.GREEN_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SPRING_GREEN_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .input(ModItems.SPRING_GREEN_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SPRING_GREEN_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.SPRING_GREEN_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .input(ModItems.CYAN_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CYAN_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.CYAN_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CAPRI_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .input(ModItems.CAPRI_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CAPRI_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.CAPRI_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ULTRAMARINE_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .input(ModItems.ULTRAMARINE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ULTRAMARINE_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.ULTRAMARINE_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VIOLET_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .input(ModItems.VIOLET_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.VIOLET_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.VIOLET_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .input(ModItems.MAGENTA_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MAGENTA_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.MAGENTA_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .input(ModItems.PINK_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PINK_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.PINK_BLAZELITE_BLOCK)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROSE_BLAZELITE_BLOCK)
                 .input(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .input(ModItems.ROSE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ROSE_BLAZELITE_BLOCK)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.ROSE_BLAZELITE_BLOCK)));
     }
     private void offerBlazeliteBrickRecipes(RecipeExporter exporter) {
         offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLAZELITE_BRICKS, ModBlocks.BLAZELITE_BLOCK);
@@ -186,97 +208,97 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.WHITE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.WHITE_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.WHITE_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.LIGHT_GRAY_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.LIGHT_GRAY_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.LIGHT_GRAY_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_GRAY_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.DARK_GRAY_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.DARK_GRAY_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.DARK_GRAY_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.RED_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.RED_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.RED_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.ORANGE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ORANGE_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.ORANGE_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.YELLOW_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.YELLOW_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.YELLOW_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHARTREUSE_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.CHARTREUSE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CHARTREUSE_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.CHARTREUSE_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.GREEN_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GREEN_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.GREEN_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SPRING_GREEN_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.SPRING_GREEN_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SPRING_GREEN_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.SPRING_GREEN_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.CYAN_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CYAN_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.CYAN_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CAPRI_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.CAPRI_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CAPRI_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.CAPRI_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ULTRAMARINE_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.ULTRAMARINE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ULTRAMARINE_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.ULTRAMARINE_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VIOLET_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.VIOLET_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.VIOLET_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.VIOLET_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.MAGENTA_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MAGENTA_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.MAGENTA_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.PINK_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PINK_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.PINK_BLAZELITE_BRICKS)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROSE_BLAZELITE_BRICKS)
                 .input(ModTags.Items.BLAZELITE_BRICK_ITEMS)
                 .input(ModItems.ROSE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ROSE_BLAZELITE_BRICKS)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.ROSE_BLAZELITE_BRICKS)+"_pigmented"));
     }
     private void offerBlazeliteTileRecipes(RecipeExporter exporter) {
         offer2x2CompactingRecipe(exporter, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLAZELITE_TILES, ModBlocks.BLAZELITE_BRICKS);
@@ -301,122 +323,122 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.WHITE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.WHITE_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.WHITE_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.LIGHT_GRAY_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.LIGHT_GRAY_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.LIGHT_GRAY_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.DARK_GRAY_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.DARK_GRAY_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.DARK_GRAY_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.DARK_GRAY_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.RED_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.RED_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.RED_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.ORANGE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ORANGE_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.ORANGE_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.YELLOW_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.YELLOW_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.YELLOW_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHARTREUSE_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.CHARTREUSE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CHARTREUSE_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.CHARTREUSE_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.GREEN_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GREEN_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.GREEN_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.SPRING_GREEN_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.SPRING_GREEN_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SPRING_GREEN_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.SPRING_GREEN_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.CYAN_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CYAN_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.CYAN_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CAPRI_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.CAPRI_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CAPRI_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.CAPRI_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ULTRAMARINE_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.ULTRAMARINE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ULTRAMARINE_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.ULTRAMARINE_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VIOLET_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.VIOLET_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.VIOLET_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.VIOLET_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.MAGENTA_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MAGENTA_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.MAGENTA_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.PINK_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PINK_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.PINK_BLAZELITE_TILES)+"_pigmented"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ROSE_BLAZELITE_TILES)
                 .input(ModTags.Items.BLAZELITE_TILE_ITEMS)
                 .input(ModItems.ROSE_PIGMENT)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BRICKS), conditionsFromItem(ModBlocks.BLAZELITE_BRICKS))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ROSE_BLAZELITE_TILES)+"_pigmented"));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.ROSE_BLAZELITE_TILES)+"_pigmented"));
     }
     private void offerPigmentRecipes(RecipeExporter exporter) {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.RED_PIGMENT)
                 .input(Items.BLAZE_POWDER)
                 .input(Items.REDSTONE)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("red_pigment"));
+                .offerTo(exporter, FarestsIdeas.makeId("red_pigment"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.YELLOW_PIGMENT)
                 .input(Items.BLAZE_POWDER)
                 .input(Items.GOLD_NUGGET)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("yellow_pigment"));
+                .offerTo(exporter, FarestsIdeas.makeId("yellow_pigment"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ULTRAMARINE_PIGMENT)
                 .input(Items.BLAZE_POWDER)
                 .input(Items.LAPIS_LAZULI)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("ultramarine_pigment"));
+                .offerTo(exporter, FarestsIdeas.makeId("ultramarine_pigment"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WHITE_PIGMENT)
                 .input(Items.BLAZE_POWDER)
                 .input(Items.QUARTZ)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("white_pigment"));
+                .offerTo(exporter, FarestsIdeas.makeId("white_pigment"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LIGHT_GRAY_PIGMENT)
                 .input(Items.BLAZE_POWDER)
@@ -424,51 +446,51 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(Items.CHARCOAL)
                 .input(Items.QUARTZ)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("light_gray_pigment"));
+                .offerTo(exporter, FarestsIdeas.makeId("light_gray_pigment"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.DARK_GRAY_PIGMENT)
                 .input(Items.BLAZE_POWDER)
                 .input(Items.QUARTZ)
                 .input(Items.CHARCOAL)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("dark_gray_pigment"));
+                .offerTo(exporter, FarestsIdeas.makeId("dark_gray_pigment"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.PINK_PIGMENT)
                 .input(ModItems.RED_PIGMENT)
                 .input(ModItems.WHITE_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("pink_pigment"));
+                .offerTo(exporter, FarestsIdeas.makeId("pink_pigment"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CAPRI_PIGMENT)
                 .input(ModItems.ULTRAMARINE_PIGMENT)
                 .input(ModItems.WHITE_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("capri_pigment"));
+                .offerTo(exporter, FarestsIdeas.makeId("capri_pigment"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ORANGE_PIGMENT)
                 .input(ModItems.RED_PIGMENT)
                 .input(ModItems.YELLOW_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("orange_pigment"));
+                .offerTo(exporter, FarestsIdeas.makeId("orange_pigment"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GREEN_PIGMENT)
                 .input(ModItems.ULTRAMARINE_PIGMENT)
                 .input(ModItems.YELLOW_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("green_pigment"));
+                .offerTo(exporter, FarestsIdeas.makeId("green_pigment"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.VIOLET_PIGMENT)
                 .input(ModItems.ULTRAMARINE_PIGMENT)
                 .input(ModItems.RED_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("violet_pigment"));
+                .offerTo(exporter, FarestsIdeas.makeId("violet_pigment"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHARTREUSE_PIGMENT)
                 .group("chartreuse_pigment")
                 .input(ModItems.YELLOW_PIGMENT)
                 .input(ModItems.GREEN_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("chartreuse_pigment_yg"));
+                .offerTo(exporter, FarestsIdeas.makeId("chartreuse_pigment_yg"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHARTREUSE_PIGMENT)
                 .group("chartreuse_pigment")
@@ -476,14 +498,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.YELLOW_PIGMENT)
                 .input(ModItems.ULTRAMARINE_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("chartreuse_pigment_yyu"));
+                .offerTo(exporter, FarestsIdeas.makeId("chartreuse_pigment_yyu"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CYAN_PIGMENT)
                 .group("cyan_pigment")
                 .input(ModItems.SPRING_GREEN_PIGMENT)
                 .input(ModItems.ULTRAMARINE_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("cyan_pigment_su"));
+                .offerTo(exporter, FarestsIdeas.makeId("cyan_pigment_su"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CYAN_PIGMENT)
                 .group("cyan_pigment")
@@ -492,14 +514,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.ULTRAMARINE_PIGMENT)
                 .input(ModItems.ULTRAMARINE_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("cyan_pigment_yuuu"));
+                .offerTo(exporter, FarestsIdeas.makeId("cyan_pigment_yuuu"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPRING_GREEN_PIGMENT)
                 .group("spring_green_pigment")
                 .input(ModItems.GREEN_PIGMENT)
                 .input(ModItems.ULTRAMARINE_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("spring_green_pigment_gu"));
+                .offerTo(exporter, FarestsIdeas.makeId("spring_green_pigment_gu"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPRING_GREEN_PIGMENT)
                 .group("spring_green_pigment")
@@ -507,14 +529,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.ULTRAMARINE_PIGMENT)
                 .input(ModItems.ULTRAMARINE_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("spring_green_pigment_yuu"));
+                .offerTo(exporter, FarestsIdeas.makeId("spring_green_pigment_yuu"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MAGENTA_PIGMENT)
                 .group("magenta_pigment")
                 .input(ModItems.VIOLET_PIGMENT)
                 .input(ModItems.PINK_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("magenta_pigment_vp"));
+                .offerTo(exporter, FarestsIdeas.makeId("magenta_pigment_vp"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.MAGENTA_PIGMENT)
                 .group("magenta_pigment")
@@ -523,14 +545,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.ULTRAMARINE_PIGMENT)
                 .input(ModItems.WHITE_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("magenta_pigment_rruw"));
+                .offerTo(exporter, FarestsIdeas.makeId("magenta_pigment_rruw"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ROSE_PIGMENT)
                 .group("rose_pigment")
                 .input(ModItems.RED_PIGMENT)
                 .input(ModItems.PINK_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("rose_pigment_rp"));
+                .offerTo(exporter, FarestsIdeas.makeId("rose_pigment_rp"));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.ROSE_PIGMENT)
                 .group("rose_pigment")
@@ -538,7 +560,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input(ModItems.RED_PIGMENT)
                 .input(ModItems.WHITE_PIGMENT)
                 .criterion(hasItem(ModItems.BLAZELITE_INGOT), conditionsFromItem(ModItems.BLAZELITE_INGOT))
-                .offerTo(exporter, new Identifier("rose_pigment_rrw"));
+                .offerTo(exporter, FarestsIdeas.makeId("rose_pigment_rrw"));
     }
     private void offerBlazeliteSlabRecipes() {
         createSlabRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLAZELITE_STAIRS, Ingredient.ofItems(ModBlocks.BLAZELITE_BLOCK));
@@ -722,87 +744,87 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.BLAZELITE_BUTTON)));
         
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.WHITE_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.WHITE_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.WHITE_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.WHITE_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.WHITE_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.WHITE_BLAZELITE_BUTTON)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.LIGHT_GRAY_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.LIGHT_GRAY_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.LIGHT_GRAY_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.LIGHT_GRAY_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.LIGHT_GRAY_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.LIGHT_GRAY_BLAZELITE_BUTTON)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.DARK_GRAY_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.DARK_GRAY_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.DARK_GRAY_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.DARK_GRAY_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.DARK_GRAY_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.DARK_GRAY_BLAZELITE_BUTTON)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.RED_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.RED_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.RED_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.RED_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.RED_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.RED_BLAZELITE_BUTTON)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.ORANGE_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.ORANGE_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.ORANGE_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.ORANGE_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ORANGE_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.ORANGE_BLAZELITE_BUTTON)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.YELLOW_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.YELLOW_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.YELLOW_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.YELLOW_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.YELLOW_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.YELLOW_BLAZELITE_BUTTON)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.CHARTREUSE_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.CHARTREUSE_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.CHARTREUSE_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.CHARTREUSE_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CHARTREUSE_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.CHARTREUSE_BLAZELITE_BUTTON)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.GREEN_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.GREEN_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.GREEN_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.GREEN_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GREEN_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.GREEN_BLAZELITE_BUTTON)));
         
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.SPRING_GREEN_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.SPRING_GREEN_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.SPRING_GREEN_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.SPRING_GREEN_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.SPRING_GREEN_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.SPRING_GREEN_BLAZELITE_BUTTON)));
         
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.CYAN_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.CYAN_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.CYAN_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.CYAN_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CYAN_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.CYAN_BLAZELITE_BUTTON)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.CAPRI_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.CAPRI_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.CAPRI_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.CAPRI_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.CAPRI_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.CAPRI_BLAZELITE_BUTTON)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.ULTRAMARINE_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.ULTRAMARINE_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.ULTRAMARINE_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.ULTRAMARINE_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ULTRAMARINE_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.ULTRAMARINE_BLAZELITE_BUTTON)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.VIOLET_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.VIOLET_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.VIOLET_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.VIOLET_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.VIOLET_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.VIOLET_BLAZELITE_BUTTON)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.MAGENTA_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.MAGENTA_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.MAGENTA_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.MAGENTA_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.MAGENTA_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.MAGENTA_BLAZELITE_BUTTON)));
 
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.PINK_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.PINK_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.PINK_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.PINK_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.PINK_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.PINK_BLAZELITE_BUTTON)));
         
         ShapelessRecipeJsonBuilder.create(RecipeCategory.REDSTONE, ModBlocks.ROSE_BLAZELITE_BUTTON, 1)
                 .input(ModBlocks.ROSE_BLAZELITE_BLOCK)
                 .criterion(hasItem(ModBlocks.ROSE_BLAZELITE_BLOCK), conditionsFromItem(ModBlocks.ROSE_BLAZELITE_BLOCK))
-                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.ROSE_BLAZELITE_BUTTON)));
+                .offerTo(exporter, FarestsIdeas.makeId(getRecipeName(ModBlocks.ROSE_BLAZELITE_BUTTON)));
     }
     private void offerBlazelitePressurePlateRecipes() {
         createPressurePlateRecipe(RecipeCategory.REDSTONE, ModBlocks.BLAZELITE_TRAPDOOR, Ingredient.ofItems(ModBlocks.BLAZELITE_PRESSURE_PLATE));

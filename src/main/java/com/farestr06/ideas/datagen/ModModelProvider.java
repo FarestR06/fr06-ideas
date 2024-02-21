@@ -18,6 +18,9 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.SALT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SALTPETER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GRAPHITE, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.COFFEE_BERRIES, Models.GENERATED);
         itemModelGenerator.register(ModItems.SHRINKWEED, Models.GENERATED);
 
@@ -58,7 +61,23 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.OILY_DEEPSLATE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DEEPSOIL);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRAPHITE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.GRAPHENE_BLOCK);
+
         blockStateModelGenerator.registerCrop(ModBlocks.OAK_SAPLING_CROP, OakSaplingCropBlock.AGE, 0,1,2,3);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_OAK_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_SPRUCE_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_BIRCH_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_JUNGLE_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_ACACIA_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_DARK_OAK_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_AZALEA_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_FLOWERING_AZALEA_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_MANGROVE_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_CHERRY_LEAVES);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VOID_BLOCK);
 
         generateBlazeliteModels(blockStateModelGenerator);
         generateWhiteBlazeliteModels(blockStateModelGenerator);
@@ -80,7 +99,6 @@ public class ModModelProvider extends FabricModelProvider {
     }
 
     private static void generateBlazeliteModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VOID_BLOCK);
 
         BlockStateModelGenerator.BlockTexturePool blazeliteBlockPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLAZELITE_BLOCK);
         BlockStateModelGenerator.BlockTexturePool blazeliteBrickPool = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.BLAZELITE_BRICKS);

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "fr06-ideas:block/rose_blazelite_bricks",
+    "side": "fr06-ideas:block/rose_blazelite_bricks",
+    "top": "fr06-ideas:block/rose_blazelite_bricks"
+  }
+}

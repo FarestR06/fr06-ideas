@@ -2,7 +2,6 @@ package com.farestr06.ideas.item;
 
 import com.farestr06.ideas.FarestsIdeas;
 import com.farestr06.ideas.block.ModBlocks;
-import com.farestr06.ideas.block.custom.GlintedItem;
 import com.farestr06.ideas.item.custom.SaltItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -26,7 +25,7 @@ public class ModItems {
     public static final Item TEOSINTE = registerItem("teosinte", new Item(new FabricItemSettings().food(FoodComponents.BREAD)));
     public static final Item ACORN = registerItem("acorn", new AliasedBlockItem(ModBlocks.OAK_SAPLING_CROP, new FabricItemSettings().food(ModFoodComponents.ACORN)));
     public static final Item GOLDEN_ACORN = registerItem("golden_acorn", new Item(new FabricItemSettings().food(ModFoodComponents.GOLDEN_ACORN)));
-    public static final Item ENCHANTED_GOLDEN_ACORN = registerItem("enchanted_golden_acorn", new GlintedItem(new FabricItemSettings().rarity(Rarity.RARE).food(ModFoodComponents.ENCHANTED_GOLDEN_ACORN)));
+    public static final Item ENCHANTED_GOLDEN_ACORN = registerItem("enchanted_golden_acorn", new EnchantedGoldenAppleItem(new FabricItemSettings().rarity(Rarity.RARE).food(ModFoodComponents.ENCHANTED_GOLDEN_ACORN)));
 
     // Farming Items
 
@@ -34,6 +33,9 @@ public class ModItems {
 
     // BREWING ITEMS
     public static final Item BOTTLE_OF_VOID = registerItem("void", new Item(new FabricItemSettings()));
+
+    // Ores
+    public static final Item GRAPHITE = registerItem("graphite", new Item(new FabricItemSettings()));
 
     // Blazelite Tools
     public static final Item BLAZELITE_SWORD = registerItem("blazelite_sword", new SwordItem
@@ -101,6 +103,8 @@ public class ModItems {
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
         entries.add(SALT);
+        entries.add(SALTPETER);
+        entries.add(GRAPHITE);
         entries.add(COFFEE_BERRIES);
         entries.add(SHRINKWEED);
         entries.add(BLAZELITE_INGOT);

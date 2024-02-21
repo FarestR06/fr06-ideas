@@ -8,12 +8,13 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.GameRules;
 
-public class InfestedLeavesBlock extends InfestedBlock {
-    public InfestedLeavesBlock(Block regularBlock, Settings settings) {
+public class CreepingLeavesBlock extends InfestedBlock {
+    public CreepingLeavesBlock(Block regularBlock, Settings settings) {
         super(regularBlock, settings);
     }
 
@@ -28,8 +29,7 @@ public class InfestedLeavesBlock extends InfestedBlock {
 
     @Override
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack tool, boolean dropExperience) {
-        super.onStacksDropped(state, world, pos, tool, dropExperience);
-        if (world.getGameRules().getBoolean(GameRules.DO_TILE_DROPS) && EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, tool) == 0) {
+        if (world.getGameRules().getBoolean(GameRules.DO_TILE_DROPS) && (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, tool) == 0 || tool.isOf(Items.SHEARS))) {
             this.spawnCreeper(world, pos);
         }
     }

@@ -46,6 +46,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addPinkBlazeliteBlockDrops();
         addRoseBlazeliteBlockDrops();
         addDrop(ModBlocks.OILY_DEEPSLATE, PlentifulOreDrops(ModBlocks.OILY_DEEPSLATE, ModItems.OIL_BALL, 1.0f, 4.0f));
+        addDrop(ModBlocks.GRAPHITE_BLOCK);
+        addDrop(ModBlocks.GRAPHENE_BLOCK);
 
         BlockStatePropertyLootCondition.Builder oakSaplingBuilder = BlockStatePropertyLootCondition.builder(ModBlocks.OAK_SAPLING_CROP).properties(StatePredicate.Builder.create()
                 .exactMatch(OakSaplingCropBlock.AGE, 3));
@@ -53,7 +55,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.OAK_SAPLING_CROP, cropDrops(ModBlocks.OAK_SAPLING_CROP, Items.OAK_SAPLING, ModItems.ACORN, oakSaplingBuilder));
 
     }
-
     private void addRoseBlazeliteBlockDrops() {
         addDrop(ModBlocks.ROSE_BLAZELITE_BLOCK);
         addDrop(ModBlocks.ROSE_BLAZELITE_SLAB, slabDrops(ModBlocks.ROSE_BLAZELITE_SLAB));
@@ -78,7 +79,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ROSE_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.ROSE_BLAZELITE_TILE_WALL);
     }
-
     private void addPinkBlazeliteBlockDrops() {
         addDrop(ModBlocks.PINK_BLAZELITE_BLOCK);
         addDrop(ModBlocks.PINK_BLAZELITE_SLAB, slabDrops(ModBlocks.PINK_BLAZELITE_SLAB));
@@ -103,7 +103,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.PINK_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.PINK_BLAZELITE_TILE_WALL);
     }
-
     private void addMagentaBlazeliteBlockDrops() {
         addDrop(ModBlocks.MAGENTA_BLAZELITE_BLOCK);
         addDrop(ModBlocks.MAGENTA_BLAZELITE_SLAB, slabDrops(ModBlocks.MAGENTA_BLAZELITE_SLAB));
@@ -128,7 +127,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.MAGENTA_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.MAGENTA_BLAZELITE_TILE_WALL);
     }
-
     private void addVioletBlazeliteBlockDrops() {
         addDrop(ModBlocks.VIOLET_BLAZELITE_BLOCK);
         addDrop(ModBlocks.VIOLET_BLAZELITE_SLAB, slabDrops(ModBlocks.VIOLET_BLAZELITE_SLAB));
@@ -153,7 +151,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.VIOLET_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.VIOLET_BLAZELITE_TILE_WALL);
     }
-
     private void addUltramarineBlazeliteBlockDrops() {
         addDrop(ModBlocks.ULTRAMARINE_BLAZELITE_BLOCK);
         addDrop(ModBlocks.ULTRAMARINE_BLAZELITE_SLAB, slabDrops(ModBlocks.ULTRAMARINE_BLAZELITE_SLAB));
@@ -178,7 +175,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ULTRAMARINE_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.ULTRAMARINE_BLAZELITE_TILE_WALL);
     }
-
     private void addCapriBlazeliteBlockDrops() {
         addDrop(ModBlocks.CAPRI_BLAZELITE_BLOCK);
         addDrop(ModBlocks.CAPRI_BLAZELITE_SLAB, slabDrops(ModBlocks.CAPRI_BLAZELITE_SLAB));
@@ -203,7 +199,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CAPRI_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.CAPRI_BLAZELITE_TILE_WALL);
     }
-
     private void addCyanBlazeliteBlockDrops() {
         addDrop(ModBlocks.CYAN_BLAZELITE_BLOCK);
         addDrop(ModBlocks.CYAN_BLAZELITE_SLAB, slabDrops(ModBlocks.CYAN_BLAZELITE_SLAB));
@@ -228,7 +223,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CYAN_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.CYAN_BLAZELITE_TILE_WALL);
     }
-
     private void addSpringGreenBlazeliteBlockDrops() {
         addDrop(ModBlocks.SPRING_GREEN_BLAZELITE_BLOCK);
         addDrop(ModBlocks.SPRING_GREEN_BLAZELITE_SLAB, slabDrops(ModBlocks.SPRING_GREEN_BLAZELITE_SLAB));
@@ -253,7 +247,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.SPRING_GREEN_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.SPRING_GREEN_BLAZELITE_TILE_WALL);
     }
-
     private void addGreenBlazeliteBlockDrops() {
         addDrop(ModBlocks.GREEN_BLAZELITE_BLOCK);
         addDrop(ModBlocks.GREEN_BLAZELITE_SLAB, slabDrops(ModBlocks.GREEN_BLAZELITE_SLAB));
@@ -278,7 +271,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.GREEN_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.GREEN_BLAZELITE_TILE_WALL);
     }
-
     private void addChartreuseBlazeliteBlockDrops() {
         addDrop(ModBlocks.CHARTREUSE_BLAZELITE_BLOCK);
         addDrop(ModBlocks.CHARTREUSE_BLAZELITE_SLAB, slabDrops(ModBlocks.CHARTREUSE_BLAZELITE_SLAB));
@@ -303,7 +295,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.CHARTREUSE_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.CHARTREUSE_BLAZELITE_TILE_WALL);
     }
-
     private void addYellowBlazeliteBlockDrops() {
         addDrop(ModBlocks.YELLOW_BLAZELITE_BLOCK);
         addDrop(ModBlocks.YELLOW_BLAZELITE_SLAB, slabDrops(ModBlocks.YELLOW_BLAZELITE_SLAB));
@@ -328,7 +319,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.YELLOW_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.YELLOW_BLAZELITE_TILE_WALL);
     }
-
     private void addOrangeBlazeliteBlockDrops() {
         addDrop(ModBlocks.ORANGE_BLAZELITE_BLOCK);
         addDrop(ModBlocks.ORANGE_BLAZELITE_SLAB, slabDrops(ModBlocks.ORANGE_BLAZELITE_SLAB));
@@ -353,7 +343,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.ORANGE_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.ORANGE_BLAZELITE_TILE_WALL);
     }
-
     private void addRedBlazeliteBlockDrops() {
         addDrop(ModBlocks.RED_BLAZELITE_BLOCK);
         addDrop(ModBlocks.RED_BLAZELITE_SLAB, slabDrops(ModBlocks.RED_BLAZELITE_SLAB));
@@ -378,7 +367,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.RED_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.RED_BLAZELITE_TILE_WALL);
     }
-
     private void addDarkGrayBlazeliteBlockDrops() {
         addDrop(ModBlocks.DARK_GRAY_BLAZELITE_BLOCK);
         addDrop(ModBlocks.DARK_GRAY_BLAZELITE_SLAB, slabDrops(ModBlocks.DARK_GRAY_BLAZELITE_SLAB));
@@ -403,7 +391,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.DARK_GRAY_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.DARK_GRAY_BLAZELITE_TILE_WALL);
     }
-
     private void addLightGrayBlazeliteBlockDrops() {
         addDrop(ModBlocks.LIGHT_GRAY_BLAZELITE_BLOCK);
         addDrop(ModBlocks.LIGHT_GRAY_BLAZELITE_SLAB, slabDrops(ModBlocks.LIGHT_GRAY_BLAZELITE_SLAB));
@@ -428,7 +415,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.LIGHT_GRAY_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.LIGHT_GRAY_BLAZELITE_TILE_WALL);
     }
-
     private void addWhiteBlazeliteBlockDrops() {
         addDrop(ModBlocks.WHITE_BLAZELITE_BLOCK);
         addDrop(ModBlocks.WHITE_BLAZELITE_SLAB, slabDrops(ModBlocks.WHITE_BLAZELITE_SLAB));
@@ -453,7 +439,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.WHITE_BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.WHITE_BLAZELITE_TILE_WALL);
     }
-
     private void addBlazeliteBlockDrops() {
         addDrop(ModBlocks.BLAZELITE_BLOCK);
         addDrop(ModBlocks.BLAZELITE_SLAB, slabDrops(ModBlocks.BLAZELITE_SLAB));
@@ -478,7 +463,8 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.BLAZELITE_TILE_FENCE_GATE);
         addDrop(ModBlocks.BLAZELITE_TILE_WALL);
     }
-
+    
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     public LootTable.Builder PlentifulOreDrops(Block drop, Item item, float min, float max) {
             return BlockLootTableGenerator.dropsWithSilkTouch(drop, (LootPoolEntry.Builder)this.applyExplosionDecay(drop,
                     ((LeafEntry.Builder)ItemEntry.builder(item)
