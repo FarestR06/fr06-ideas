@@ -13,6 +13,7 @@ public class SaltItem extends Item {
         super(settings);
     }
 
+    @SuppressWarnings("resource")
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
         if(!context.getWorld().isClient){

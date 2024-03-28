@@ -22,6 +22,18 @@ public class ModBlocks {
     public static final Block VOID_BLOCK = registerBlock("void_block",
             new VoidBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.SOUL_SAND).strength(0.5f, 1111.1f).instrument(Instrument.DRAGON).collidable(false).emissiveLighting(Blocks::always).replaceable()));
 
+    // Workstations
+
+    // Wood
+
+    public static final Block MAPLE_LOG = registerBlock("maple_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).strength(2f))); 
+    public static final Block MAPLE_WOOD = registerBlock("maple_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).strength(2f))); 
+    public static final Block STRIPPED_MAPLE_LOG = registerBlock("stripped_maple_log", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).strength(2f))); 
+    public static final Block STRIPPED_MAPLE_WOOD = registerBlock("stripped_maple_wood", new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).strength(2f)));
+    
+    public static final Block MAPLE_PLANKS = registerBlock("maple_planks", new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS).strength(2f)));
+    public static final Block MAPLE_LEAVES = registerBlock("maple_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).strength(2f)));
+
     // Ores
 
     public static final Block GRAPHITE_BLOCK = registerBlock("graphite_block",
@@ -56,6 +68,8 @@ public class ModBlocks {
             new CreepingLeavesBlock(Blocks.MANGROVE_LEAVES, FabricBlockSettings.copyOf(Blocks.MANGROVE_LEAVES)));
     public static final Block CREEPING_CHERRY_LEAVES = registerBlock("creeping_cherry_leaves",
             new CreepingLeavesBlock(Blocks.CHERRY_LEAVES, FabricBlockSettings.copyOf(Blocks.CHERRY_LEAVES)));
+    public static final Block CREEPING_MAPLE_LEAVES = registerBlock("creeping_maple_leaves",
+            new CreepingLeavesBlock(ModBlocks.MAPLE_LEAVES, FabricBlockSettings.copyOf(ModBlocks.MAPLE_LEAVES)));
 
     // Blazelite
     public static final Block BLAZELITE_BLOCK = registerBlock("blazelite_block",
@@ -1118,10 +1132,16 @@ public class ModBlocks {
 
 
     private static void addBlocksToBuildingBlockItemGroup(FabricItemGroupEntries entries) {
+        entries.add(MAPLE_LOG);
+        entries.add(MAPLE_WOOD);
+        entries.add(STRIPPED_MAPLE_LOG);
+        entries.add(STRIPPED_MAPLE_WOOD);
+        entries.add(MAPLE_PLANKS);
         entries.add(GRAPHITE_BLOCK);
         entries.add(GRAPHENE_BLOCK);
     }
     private static void addBlocksToNaturalBlockItemGroup(FabricItemGroupEntries entries) {
+        entries.add(MAPLE_LEAVES);
         entries.add(CREEPING_OAK_LEAVES);
         entries.add(CREEPING_SPRUCE_LEAVES);
         entries.add(CREEPING_BIRCH_LEAVES);
@@ -1132,6 +1152,7 @@ public class ModBlocks {
         entries.add(CREEPING_FLOWERING_AZALEA_LEAVES);
         entries.add(CREEPING_MANGROVE_LEAVES);
         entries.add(CREEPING_CHERRY_LEAVES);
+        entries.add(CREEPING_MAPLE_LEAVES);
         entries.add(DEEPSOIL);
         entries.add(OILY_DEEPSLATE);
     }

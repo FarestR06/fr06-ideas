@@ -1,0 +1,34 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:hopper"
+      },
+      "title": "Pipe Dream",
+      "description": "Craft a hopper, which allows item transport on an industrial scale",
+      "frame": "task",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+    },
+    "parent": "achievements:find_ancient_city",
+    "criteria": {
+      "hopper": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "minecraft:hopper"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "hopper"
+      ]
+    ],
+    "sends_telemetry_event": true
+}

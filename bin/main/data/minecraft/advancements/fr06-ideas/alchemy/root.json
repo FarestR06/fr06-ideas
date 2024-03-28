@@ -1,0 +1,36 @@
+{
+  "criteria": {
+    "got_alchemy_table": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "fr06-ideas:alchemy_table"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "fr06-ideas:textures/gui/advancements/backgrounds/alchemy.png",
+    "description": {
+      "translate": "advancements.alchemy.root.description"
+    },
+    "icon": {
+      "item": "fr06-ideas:alchemy_table"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.alchemy.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_alchemy_table"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

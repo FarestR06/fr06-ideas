@@ -27,6 +27,15 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.BLAZELITE_HELMET)
                 .add(ModItems.BLAZELITE_LEGGINGS);
 
+        getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(ModBlocks.MAPLE_PLANKS.asItem());
+        
+        getOrCreateTagBuilder(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.MAPLE_LOG.asItem())
+                .add(ModBlocks.MAPLE_WOOD.asItem())
+                .add(ModBlocks.STRIPPED_MAPLE_LOG.asItem())
+                .add(ModBlocks.STRIPPED_MAPLE_WOOD.asItem());
+
         getOrCreateTagBuilder(ModTags.Items.BLAZELITE_BLOCK_ITEMS)
                 .add(ModBlocks.BLAZELITE_BLOCK.asItem())
                 .add(ModBlocks.CAPRI_BLAZELITE_BLOCK.asItem())

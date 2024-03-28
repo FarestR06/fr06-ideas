@@ -78,6 +78,7 @@ public class CavefowlEntity extends ChickenEntity implements Angerable {
         return BREEDING_INGREDIENT.test(stack);
     }
 
+    @SuppressWarnings("resource")
     @Override
     public void tickMovement() {
         super.tickMovement();
