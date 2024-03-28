@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/button",
-  "textures": {
-    "texture": "fr06-ideas:block/white_blazelite_block"
-  }
-}

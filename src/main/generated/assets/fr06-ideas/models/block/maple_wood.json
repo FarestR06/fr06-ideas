@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "fr06-ideas:block/maple_log",
-    "side": "fr06-ideas:block/maple_log"
-  }
-}

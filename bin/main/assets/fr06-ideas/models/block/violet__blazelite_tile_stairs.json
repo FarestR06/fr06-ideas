@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "fr06-ideas:block/violet_blazelite_tiles",
-    "side": "fr06-ideas:block/violet_blazelite_tiles",
-    "top": "fr06-ideas:block/violet_blazelite_tiles"
-  }
-}

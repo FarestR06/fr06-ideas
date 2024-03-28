@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "fr06-ideas:block/ultramarine_blazelite_bricks",
-    "side": "fr06-ideas:block/ultramarine_blazelite_bricks",
-    "top": "fr06-ideas:block/ultramarine_blazelite_bricks"
-  }
-}

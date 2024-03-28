@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/pressure_plate_down",
-  "textures": {
-    "texture": "fr06-ideas:block/spring_green_blazelite_block"
-  }
-}

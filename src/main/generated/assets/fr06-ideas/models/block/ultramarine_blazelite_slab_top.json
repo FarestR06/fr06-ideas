@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "fr06-ideas:block/ultramarine_blazelite_block",
-    "side": "fr06-ideas:block/ultramarine_blazelite_block",
-    "top": "fr06-ideas:block/ultramarine_blazelite_block"
-  }
-}

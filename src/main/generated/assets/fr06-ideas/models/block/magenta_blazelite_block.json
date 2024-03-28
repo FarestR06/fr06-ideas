@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "fr06-ideas:block/magenta_blazelite_block"
-  }
-}

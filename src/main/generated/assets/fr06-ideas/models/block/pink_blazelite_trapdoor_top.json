@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_trapdoor_top",
-  "textures": {
-    "texture": "fr06-ideas:block/pink_blazelite_trapdoor"
-  }
-}
