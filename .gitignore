@@ -1,7 +1,4 @@
 # Project exclude paths
-/src/main/generated/.cache/
-/bin/main/.cache/
 /.gradle/
 /build/
 /run/
-/.idea/
