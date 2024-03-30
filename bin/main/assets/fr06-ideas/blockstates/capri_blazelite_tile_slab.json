@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "fr06-ideas:block/capri_blazelite_tile_slab"
+    },
+    "type=double": {
+      "model": "fr06-ideas:block/capri_blazelite_tiles"
+    },
+    "type=top": {
+      "model": "fr06-ideas:block/capri_blazelite_tile_slab_top"
+    }
+  }
+}

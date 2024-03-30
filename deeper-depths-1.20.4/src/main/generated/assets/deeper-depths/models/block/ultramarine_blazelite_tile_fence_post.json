@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/fence_post",
-  "textures": {
-    "texture": "deeper-depths:block/ultramarine_blazelite_tiles"
-  }
-}

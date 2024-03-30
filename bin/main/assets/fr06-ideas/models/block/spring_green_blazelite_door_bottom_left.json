@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "fr06-ideas:block/spring_green_blazelite_door_bottom",
+    "top": "fr06-ideas:block/spring_green_blazelite_door_top"
+  }
+}

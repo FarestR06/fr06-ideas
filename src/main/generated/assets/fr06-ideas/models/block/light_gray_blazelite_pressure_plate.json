@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_up",
+  "textures": {
+    "texture": "fr06-ideas:block/light_gray_blazelite_block"
+  }
+}

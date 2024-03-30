@@ -6,6 +6,7 @@ import com.farestr06.ideas.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.loottable.BlockLootTableGenerator;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.Item;
@@ -48,6 +49,13 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.OILY_DEEPSLATE, PlentifulOreDrops(ModBlocks.OILY_DEEPSLATE, ModItems.OIL_BALL, 1.0f, 4.0f));
         addDrop(ModBlocks.GRAPHITE_BLOCK);
         addDrop(ModBlocks.GRAPHENE_BLOCK);
+
+        addDrop(ModBlocks.MAPLE_LOG);
+        addDrop(ModBlocks.MAPLE_WOOD);
+        addDrop(ModBlocks.STRIPPED_MAPLE_LOG);
+        addDrop(ModBlocks.STRIPPED_MAPLE_WOOD);
+
+        addDrop(ModBlocks.MAPLE_LEAVES, leavesDrops(ModBlocks.MAPLE_LEAVES, Blocks.OAK_SAPLING, LEAVES_STICK_DROP_CHANCE));
 
         BlockStatePropertyLootCondition.Builder oakSaplingBuilder = BlockStatePropertyLootCondition.builder(ModBlocks.OAK_SAPLING_CROP).properties(StatePredicate.Builder.create()
                 .exactMatch(OakSaplingCropBlock.AGE, 3));

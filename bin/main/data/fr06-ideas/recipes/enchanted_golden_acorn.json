@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_block"
+    },
+    "&": {
+      "item": "fr06-ideas:golden_acorn"
+    }
+  },
+  "pattern": [
+    "###",
+    "#&#",
+    "###"
+  ],
+  "result": {
+    "item": "fr06-ideas:enchanted_golden_acorn"
+  }
+}

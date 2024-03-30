@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_bottom_right_open",
-  "textures": {
-    "bottom": "deeper-depths:block/green_blazelite_door_bottom",
-    "top": "deeper-depths:block/green_blazelite_door_top"
-  }
-}

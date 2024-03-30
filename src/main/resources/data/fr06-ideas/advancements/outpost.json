@@ -1,0 +1,36 @@
+{
+  "parent": "achievements:find_village",
+  "criteria": {
+    "outpost": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "minecraft:pillager_outpost"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  },
+  "display": {
+    "description": "Who are these fellows camping out near the village?",
+    "icon": {
+      "item": "minecraft:goat_horn"
+    },
+    "title": "Pillage by the Village",
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "requirements": [
+    [
+      "outpost"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

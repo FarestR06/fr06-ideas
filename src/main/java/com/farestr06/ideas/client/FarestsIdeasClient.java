@@ -33,7 +33,8 @@ public class FarestsIdeasClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ROSE_BLAZELITE_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.OAK_SAPLING_CROP, RenderLayer.getCutout());
 
-
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MAPLE_LEAVES, RenderLayer.getCutout());
+        
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CREEPING_OAK_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CREEPING_SPRUCE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CREEPING_BIRCH_LEAVES, RenderLayer.getCutout());
@@ -44,6 +45,7 @@ public class FarestsIdeasClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CREEPING_FLOWERING_AZALEA_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CREEPING_MANGROVE_LEAVES, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CREEPING_CHERRY_LEAVES, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CREEPING_MAPLE_LEAVES, RenderLayer.getCutout());
 
         EntityRendererRegistry.register(ModEntities.CAVEFOWL, CavefowlRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.CAVEFOWL, CavefowlModel::getTexturedModelData);

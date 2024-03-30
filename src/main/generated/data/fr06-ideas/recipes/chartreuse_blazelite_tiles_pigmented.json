@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "fr06-ideas:blazelite_tiles"
+    },
+    {
+      "item": "fr06-ideas:chartreuse_pigment"
+    }
+  ],
+  "result": {
+    "item": "fr06-ideas:chartreuse_blazelite_tiles"
+  }
+}

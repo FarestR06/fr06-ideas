@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side",
+  "textures": {
+    "wall": "fr06-ideas:block/green_blazelite_tiles"
+  }
+}

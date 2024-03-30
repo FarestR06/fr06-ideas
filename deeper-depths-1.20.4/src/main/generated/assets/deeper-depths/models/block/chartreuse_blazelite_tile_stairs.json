@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "deeper-depths:block/chartreuse_blazelite_tiles",
-    "side": "deeper-depths:block/chartreuse_blazelite_tiles",
-    "top": "deeper-depths:block/chartreuse_blazelite_tiles"
-  }
-}

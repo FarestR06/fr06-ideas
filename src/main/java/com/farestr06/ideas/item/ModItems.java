@@ -31,6 +31,10 @@ public class ModItems {
 
     public static final Item SALTPETER = registerItem("saltpeter", new BoneMealItem(new FabricItemSettings()));
 
+    // Alchemy Ingredients
+
+    
+
     // BREWING ITEMS
     public static final Item BOTTLE_OF_VOID = registerItem("void", new Item(new FabricItemSettings()));
 

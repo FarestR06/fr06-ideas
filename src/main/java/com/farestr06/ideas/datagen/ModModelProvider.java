@@ -66,6 +66,11 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerCrop(ModBlocks.OAK_SAPLING_CROP, OakSaplingCropBlock.AGE, 0,1,2,3);
 
+        blockStateModelGenerator.registerLog(ModBlocks.MAPLE_LOG).log(ModBlocks.MAPLE_LOG).wood(ModBlocks.MAPLE_WOOD);
+        blockStateModelGenerator.registerLog(ModBlocks.STRIPPED_MAPLE_LOG).log(ModBlocks.STRIPPED_MAPLE_LOG).wood(ModBlocks.STRIPPED_MAPLE_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAPLE_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAPLE_PLANKS);
+
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_OAK_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_SPRUCE_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_BIRCH_LEAVES);
@@ -76,6 +81,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_FLOWERING_AZALEA_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_MANGROVE_LEAVES);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_CHERRY_LEAVES);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CREEPING_MAPLE_LEAVES);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VOID_BLOCK);
 

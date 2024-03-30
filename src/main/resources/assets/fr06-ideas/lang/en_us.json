@@ -1,6 +1,54 @@
 {
-  "dataPack.blazelite.description": "Blazelite",
-  "subtitles.item.armor.equip_blazelite": "Blazelite armor thunks",
+  "advancements.advice.root.title": "Advice",
+  "advancements.advice.root.description": "This game is confusing, I know",
+
+  "advancements.adventure.wonders_of_the_world.title": "Wonders of the World",
+  "advancements.adventure.wonders_of_the_world.description": "Visit every structure that has stood the test of time",
+
+  "advancements.adventure.craft_sword.title": "Time to Strike!",
+  "advancements.adventure.craft_sword.description": "Craft a shiv from sticks and planks",
+
+  "advancements.adventure.cliffs.title": "Coming 'round the Mountain",
+  "advancements.adventure.cliffs.description": "Find a peak or grove biome.",
+
+  "advancements.adventure.caves.reach_deepslate_level.title": "Sculk's Approach",
+  "advancements.adventure.caves.reach_deepslate_level.description": "Enter the deepest depths of the overworld",
+
+  "advancements.adventure.caves.find_ancient_city.title": "Urban Exploration",
+  "advancements.adventure.caves.find_ancient_city.description": "Find yourself in a ruined metropolis",
+
+  "advancements.adventure.caves.redstone.craft_comparator.title": "Silicon Valley",
+  "advancements.adventure.caves.redstone.craft_comparator.description": "Craft a comparator, the redstone engineer's best friend",
+
+  "advancements.adventure.caves.redstone.craft_hopper.title": "Hop Hoppity Hop",
+  "advancements.adventure.caves.redstone.craft_hopper.description": "Craft a hopper, which allows item transport on an industrial scale",
+
+  "advancements.adventure.village.find_village.title": "A Peaceful Village",
+  "advancements.adventure.village.find_village.description": "Find a village; why not speak to the locals while you're at it?",
+
+  "advancements.adventure.village.outpost.title": "Pillage by the Village",
+  "advancements.adventure.village.outpost.description": "Who are these fellows camping out near the village?",
+
+  "advancements.adventure.ocean.title": "The Seven Seas",
+  "advancements.adventure.ocean.description": "Find youself in an ocean biome",
+
+  "advancements.adventure.ocean.obtain_trident.title": "Earth-shaking Discovery",
+  "advancements.adventure.ocean.obtain_trident.description": "Find the fabled Trident",
+
+  "advancements.adventure.ocean.find_shipwreck.title": "Ahoy!",
+  "advancements.adventure.ocean.find_shipwreck.description": "Find a wrecked ship",
+
+  "advancements.adventure.ocean.monument.title": "The Abyssal Monument",
+  "advancements.adventure.ocean.monument.description": "Find a shrine to an ancient deity",
+
+  "advancements.adventure.ocean.moskstraumen.title": "Moskstraumen",
+  "advancements.adventure.ocean.moskstraumen.description": "Channel the power of the seven seas",
+
+  "advancements.adventure.combat.craft_bow.title": "Time to Snipe!",
+  "advancements.adventure.combat.craft_bow.description": "Fashion a bow from spider silk",
+
+  "subtitles.item.armor.equip_blazelite": "Blazelite armor thonks",
+  "entity.fr06-ideas.cavefowl": "Cave Chicken",
 
   "death.attack.voided": "%1$s was annihilated by the void",
   "death.attack.voided.player": "%1$s was annihilated by the void whilst fighting %2$s",
@@ -66,6 +114,25 @@
 
   "block.fr06-ideas.oily_deepslate": "Oiled Deepslate",
   "block.fr06-ideas.deepsoil": "Deepsoil",
+
+  "block.fr06-ideas.maple_planks": "Maple Planks",
+  "block.fr06-ideas.maple_log": "Maple Log",
+  "block.fr06-ideas.maple_wood": "Maple Wood",
+  "block.fr06-ideas.stripped_maple_log": "Stripped Maple Log",
+  "block.fr06-ideas.stripped_maple_wood": "Stripped Maple Wood",
+  "block.fr06-ideas.maple_leaves": "Maple Leaves",
+  
+  "block.fr06-ideas.creeping_oak_leaves": "Creeping Oak Leaves",
+  "block.fr06-ideas.creeping_spruce_leaves": "Creeping Spruce Leaves",
+  "block.fr06-ideas.creeping_birch_leaves": "Creeping Birch Leaves",
+  "block.fr06-ideas.creeping_jungle_leaves": "Creeping Jungle Leaves",
+  "block.fr06-ideas.creeping_acacia_leaves": "Creeping Acacia Leaves",
+  "block.fr06-ideas.creeping_dark_oak_leaves": "Creeping Dark Oak Leaves",
+  "block.fr06-ideas.creeping_azalea_leaves": "Creeping Azalea Leaves",
+  "block.fr06-ideas.creeping_flowering_azalea_leaves": "Creeping Flowering Azalea Leaves",
+  "block.fr06-ideas.creeping_mangrove_leaves": "Creeping Mangrove Leaves",
+  "block.fr06-ideas.creeping_cherry_leaves": "Creeping Cherry Leaves",
+  "block.fr06-ideas.creeping_maple_leaves": "Creeping Maple Leaves",
 
   "block.fr06-ideas.graphite_block": "Block of Graphite",
   "block.fr06-ideas.graphene_block": "Block of Graphene",

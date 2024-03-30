@@ -1,0 +1,36 @@
+{
+    "parent": "achievements:find_shipwreck",
+    "criteria": {
+      "monument": {
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "location": {
+                  "structure": "minecraft:monument"
+                }
+              }
+            }
+          ]
+        },
+        "trigger": "minecraft:location"
+      }
+    },
+    "display": {
+      "description": "Find a shrine to an ancient deity",
+      "icon": {
+        "item": "minecraft:sponge"
+      },
+      "title": "The Abyssal Monument",
+      "frame": "task",
+      "hidden": true
+    },
+    "requirements": [
+      [
+        "monument"
+      ]
+    ],
+    "sends_telemetry_event": true
+  }

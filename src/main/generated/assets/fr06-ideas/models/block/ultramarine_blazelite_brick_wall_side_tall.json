@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_side_tall",
+  "textures": {
+    "wall": "fr06-ideas:block/ultramarine_blazelite_bricks"
+  }
+}

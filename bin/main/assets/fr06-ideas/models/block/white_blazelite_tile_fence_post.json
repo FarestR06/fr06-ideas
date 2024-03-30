@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "fr06-ideas:block/white_blazelite_tiles"
+  }
+}

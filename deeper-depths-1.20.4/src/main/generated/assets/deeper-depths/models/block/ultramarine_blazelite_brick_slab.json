@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "deeper-depths:block/ultramarine_blazelite_bricks",
-    "side": "deeper-depths:block/ultramarine_blazelite_bricks",
-    "top": "deeper-depths:block/ultramarine_blazelite_bricks"
-  }
-}

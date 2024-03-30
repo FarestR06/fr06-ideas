@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "deeper-depths:block/spring_green_blazelite_tiles",
-    "side": "deeper-depths:block/spring_green_blazelite_tiles",
-    "top": "deeper-depths:block/spring_green_blazelite_tiles"
-  }
-}

@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+<<<<<<<< HEAD:src/main/generated/assets/fr06-ideas/models/block/cyan_blazelite_block.json
+    "all": "deeper-depths:block/cyan_blazelite_block"
+========
+    "all": "fr06-ideas:block/deepsoil"
+>>>>>>>> parent of 6f279cf (Blazelite has been moved from fr06-ideas to deeper-depths.):src/main/generated/assets/fr06-ideas/models/block/deepsoil.json
+  }
+}

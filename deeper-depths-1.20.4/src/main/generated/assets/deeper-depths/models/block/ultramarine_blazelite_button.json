@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/button",
-  "textures": {
-    "texture": "deeper-depths:block/ultramarine_blazelite_block"
-  }
-}

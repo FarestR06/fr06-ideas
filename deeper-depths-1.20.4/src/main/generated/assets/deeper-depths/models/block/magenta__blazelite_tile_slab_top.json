@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "deeper-depths:block/magenta_blazelite_tiles",
-    "side": "deeper-depths:block/magenta_blazelite_tiles",
-    "top": "deeper-depths:block/magenta_blazelite_tiles"
-  }
-}

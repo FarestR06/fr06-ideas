@@ -1,0 +1,16 @@
+{
+  "item.armor.equip_blazelite": {
+    "sounds": [
+      "mob/turtle/armor",
+      {
+        "name": "mob/turtle/armor",
+        "pitch": 0.85
+      },
+      {
+        "name": "mob/turtle/armor",
+        "pitch": 1.1
+      }
+    ],
+    "subtitle": "subtitles.item.armor.equip_blazelite"
+  }
+}

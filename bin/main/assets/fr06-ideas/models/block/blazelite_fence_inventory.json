@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "texture": "fr06-ideas:block/blazelite_block"
+  }
+}

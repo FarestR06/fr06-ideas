@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "textures": {
+    "bottom": "fr06-ideas:block/ultramarine_blazelite_door_bottom",
+    "top": "fr06-ideas:block/ultramarine_blazelite_door_top"
+  }
+}

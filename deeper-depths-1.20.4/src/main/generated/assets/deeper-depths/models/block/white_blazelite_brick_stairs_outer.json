@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "deeper-depths:block/white_blazelite_bricks",
-    "side": "deeper-depths:block/white_blazelite_bricks",
-    "top": "deeper-depths:block/white_blazelite_bricks"
-  }
-}

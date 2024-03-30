@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_post",
+  "textures": {
+    "wall": "fr06-ideas:block/ultramarine_blazelite_tiles"
+  }
+}

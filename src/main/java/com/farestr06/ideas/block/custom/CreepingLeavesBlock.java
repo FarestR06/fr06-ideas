@@ -29,7 +29,7 @@ public class CreepingLeavesBlock extends InfestedBlock {
 
     @Override
     public void onStacksDropped(BlockState state, ServerWorld world, BlockPos pos, ItemStack tool, boolean dropExperience) {
-        if (world.getGameRules().getBoolean(GameRules.DO_TILE_DROPS) && (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, tool) == 0 || tool.isOf(Items.SHEARS))) {
+        if (world.getGameRules().getBoolean(GameRules.DO_TILE_DROPS) && (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, tool) == 0 || !tool.isOf(Items.SHEARS))) {
             this.spawnCreeper(world, pos);
         }
     }

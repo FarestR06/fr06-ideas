@@ -1,0 +1,38 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:trident",
+        "nbt": "{Damage:0}"
+      },
+      "title": "Earth-shaking Discovery",
+      "description": "Find the fabled Trident",
+      "frame": "challenge",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": true
+    },
+    "parent": "achievements:ocean",
+    "criteria": {
+      "get_trident": {
+        "trigger": "minecraft:inventory_changed",
+        "conditions": {
+          "items": [
+            {
+              "items": [
+                "minecraft:trident"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "requirements": [
+      [
+        "get_trident"
+      ]
+    ],
+    "rewards": {
+        "experience": 50
+    },
+    "sends_telemetry_event": true
+}

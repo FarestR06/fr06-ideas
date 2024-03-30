@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "magenta_pigment",
+  "ingredients": [
+    {
+      "item": "fr06-ideas:violet_pigment"
+    },
+    {
+      "item": "fr06-ideas:pink_pigment"
+    }
+  ],
+  "result": {
+    "item": "fr06-ideas:magenta_pigment"
+  }
+}
