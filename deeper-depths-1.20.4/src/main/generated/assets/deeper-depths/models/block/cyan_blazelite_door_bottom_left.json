@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left",
+  "textures": {
+    "bottom": "deeper-depths:block/cyan_blazelite_door_bottom",
+    "top": "deeper-depths:block/cyan_blazelite_door_top"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "deeper-depths:block/rose_blazelite_bricks",
+    "side": "deeper-depths:block/rose_blazelite_bricks",
+    "top": "deeper-depths:block/rose_blazelite_bricks"
+  }
+}

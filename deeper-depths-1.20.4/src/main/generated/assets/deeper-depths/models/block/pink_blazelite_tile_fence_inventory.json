@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "texture": "deeper-depths:block/pink_blazelite_tiles"
+  }
+}

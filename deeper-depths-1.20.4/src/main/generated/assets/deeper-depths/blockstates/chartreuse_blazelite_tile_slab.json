@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "deeper-depths:block/chartreuse_blazelite_tile_slab"
+    },
+    "type=double": {
+      "model": "deeper-depths:block/chartreuse_blazelite_tiles"
+    },
+    "type=top": {
+      "model": "deeper-depths:block/chartreuse_blazelite_tile_slab_top"
+    }
+  }
+}

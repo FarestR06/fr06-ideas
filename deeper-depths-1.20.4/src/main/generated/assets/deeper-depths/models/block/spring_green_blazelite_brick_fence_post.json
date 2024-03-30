@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "deeper-depths:block/spring_green_blazelite_bricks"
+  }
+}

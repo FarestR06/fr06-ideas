@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "deeper-depths:block/magenta_blazelite_block"
+  }
+}

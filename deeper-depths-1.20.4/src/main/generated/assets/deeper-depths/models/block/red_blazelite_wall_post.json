@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_post",
+  "textures": {
+    "wall": "deeper-depths:block/red_blazelite_block"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_trapdoor_open",
+  "textures": {
+    "texture": "deeper-depths:block/pink_blazelite_trapdoor"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate_open",
+  "textures": {
+    "texture": "deeper-depths:block/magenta_blazelite_bricks"
+  }
+}

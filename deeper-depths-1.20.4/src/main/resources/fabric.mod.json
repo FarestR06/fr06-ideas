@@ -18,6 +18,9 @@
 		"main": [
 			"com.farestr06.deeperdepths.DeeperDepths"
 		],
+		"client": [
+			"com.farestr06.deeperdepths.client.DeeperDepthsClient"
+		],
 		"fabric-datagen": [
 			"com.farestr06.deeperdepths.DeeperDepthsDataGenerator"
 		]

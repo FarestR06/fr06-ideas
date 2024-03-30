@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "deeper-depths:block/pink_blazelite_block"
+  }
+}

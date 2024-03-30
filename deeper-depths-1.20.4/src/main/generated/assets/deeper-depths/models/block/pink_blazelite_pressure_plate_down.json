@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_down",
+  "textures": {
+    "texture": "deeper-depths:block/pink_blazelite_block"
+  }
+}

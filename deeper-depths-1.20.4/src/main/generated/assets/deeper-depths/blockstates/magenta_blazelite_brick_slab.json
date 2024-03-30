@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "deeper-depths:block/magenta_blazelite_brick_slab"
+    },
+    "type=double": {
+      "model": "deeper-depths:block/magenta_blazelite_bricks"
+    },
+    "type=top": {
+      "model": "deeper-depths:block/magenta_blazelite_brick_slab_top"
+    }
+  }
+}

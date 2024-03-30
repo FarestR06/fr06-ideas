@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "deeper-depths:block/pink_blazelite_tiles",
+    "side": "deeper-depths:block/pink_blazelite_tiles",
+    "top": "deeper-depths:block/pink_blazelite_tiles"
+  }
+}

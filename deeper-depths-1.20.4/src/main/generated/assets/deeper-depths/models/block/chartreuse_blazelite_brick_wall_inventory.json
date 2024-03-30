@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "deeper-depths:block/chartreuse_blazelite_bricks"
+  }
+}

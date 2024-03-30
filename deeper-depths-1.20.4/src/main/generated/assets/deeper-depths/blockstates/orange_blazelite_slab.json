@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "deeper-depths:block/orange_blazelite_slab"
+    },
+    "type=double": {
+      "model": "deeper-depths:block/orange_blazelite_block"
+    },
+    "type=top": {
+      "model": "deeper-depths:block/orange_blazelite_slab_top"
+    }
+  }
+}

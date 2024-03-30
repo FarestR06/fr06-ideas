@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "deeper-depths:block/dark_gray_blazelite_slab"
+    },
+    "type=double": {
+      "model": "deeper-depths:block/dark_gray_blazelite_block"
+    },
+    "type=top": {
+      "model": "deeper-depths:block/dark_gray_blazelite_slab_top"
+    }
+  }
+}

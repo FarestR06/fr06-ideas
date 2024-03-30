@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "deeper-depths:block/orange_blazelite_door_bottom",
+    "top": "deeper-depths:block/orange_blazelite_door_top"
+  }
+}

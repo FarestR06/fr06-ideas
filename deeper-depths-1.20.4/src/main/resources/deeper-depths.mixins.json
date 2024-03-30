@@ -3,7 +3,8 @@
 	"package": "com.farestr06.deeperdepths.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"ModEntityDataSaverMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

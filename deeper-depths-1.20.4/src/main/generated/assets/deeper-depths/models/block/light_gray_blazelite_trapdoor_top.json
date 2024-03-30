@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_trapdoor_top",
+  "textures": {
+    "texture": "deeper-depths:block/light_gray_blazelite_trapdoor"
+  }
+}
