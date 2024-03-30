@@ -18,9 +18,6 @@
     ],
     "fabric-datagen": [
       "com.farestr06.ideas.FarestsIdeasDataGenerator"
-    ],
-    "mm:early_risers": [
-      "com.farestr06.ideas.FarestsIdeasEarlyRisers"
     ]
   },
   "mixins": [

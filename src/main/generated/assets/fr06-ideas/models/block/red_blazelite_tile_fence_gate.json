@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_fence_gate",
-  "textures": {
-    "texture": "fr06-ideas:block/red_blazelite_tiles"
-  }
-}

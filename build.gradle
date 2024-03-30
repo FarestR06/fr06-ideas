@@ -60,15 +60,6 @@ dependencies {
     modApi("com.github.Virtuoel:Pehkui:${pehkui_version}", {
         exclude group: "net.fabricmc.fabric-api"
     })
-
-    // Manningham Mills. For tinkering with the enums.
-
-    includeMod "com.github.PlanetTeamSpeakk:Fabric-ASM:master-SNAPSHOT"
-}
-
-def includeMod(String dep) {
-    dependencies.modImplementation(dep)
-    dependencies.include(dep)
 }
 
 processResources {

@@ -1,8 +1,3 @@
-// 1.20.4	2024-02-21T16:09:26.6665625	Farest's Ideas/Tags for minecraft:block
-0f96dbc285580456d44dcbc530e13c362a6b3415 data\minecraft\tags\blocks\fences.json
-21b8b36d541c330d1ea9bc2e4d49f43ea600b7a9 data\fr06-ideas\tags\blocks\blazelite_blocks.json
-5a263330a758ee013a50777b1ae2400e405ef7c8 data\minecraft\tags\blocks\mineable\pickaxe.json
-c1336ed7b4a1186a95ac0cb2c5b7ed8ff4458d28 data\minecraft\tags\blocks\walls.json
+// 1.20.4	2024-03-30T16:59:32.4671023	Farest's Ideas/Tags for minecraft:block
 23f4aefaad6b71251da9463c2fcdf38a0ebd1315 data\minecraft\tags\blocks\needs_iron_tool.json
-9855549549190b65364e89cdb365d0fa84b8d0cc data\minecraft\tags\blocks\fence_gates.json
-8d980c30e49ecaa689e660dfae00ab0a7134406a data\fr06-ideas\tags\blocks\blazelite_block_tags.json
+541d51ca3eaa1580b758c1e6dfa58fadcd58d0a0 data\minecraft\tags\blocks\logs_that_burn.json

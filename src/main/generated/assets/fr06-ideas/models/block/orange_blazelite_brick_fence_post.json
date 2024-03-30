@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/fence_post",
-  "textures": {
-    "texture": "fr06-ideas:block/orange_blazelite_bricks"
-  }
-}
