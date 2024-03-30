@@ -1,8 +1,10 @@
 package com.farestr06.deeperdepths;
 
+import com.farestr06.deeperdepths.block.BlazeliteBlocks;
 import com.farestr06.deeperdepths.block.ModBlocks;
 import com.farestr06.deeperdepths.entity.ModEntities;
 import com.farestr06.deeperdepths.entity.custom.PrimordialSlimeEntity;
+import com.farestr06.deeperdepths.item.ModItemGroups;
 import com.farestr06.deeperdepths.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -33,7 +35,9 @@ public class DeeperDepths implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 
 		ModBlocks.registerModBlocks();
+		BlazeliteBlocks.registerModBlocks();
 		ModItems.registerModItems();
+		ModItemGroups.registerItemGroups();
 		ModEntities.registerModEntities();
 		FabricDefaultAttributeRegistry.register(ModEntities.PRIMORDIAL_SLIME, HostileEntity.createHostileAttributes());
 	}

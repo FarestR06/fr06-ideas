@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "cyan_pigment",
+  "ingredients": [
+    {
+      "item": "deeper-depths:yellow_pigment"
+    },
+    {
+      "item": "deeper-depths:ultramarine_pigment"
+    },
+    {
+      "item": "deeper-depths:ultramarine_pigment"
+    },
+    {
+      "item": "deeper-depths:ultramarine_pigment"
+    }
+  ],
+  "result": {
+    "item": "deeper-depths:cyan_pigment"
+  }
+}

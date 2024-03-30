@@ -23,6 +23,9 @@
 		],
 		"fabric-datagen": [
 			"com.farestr06.deeperdepths.DeeperDepthsDataGenerator"
+		],
+		"mm:early_risers": [
+			"com.farestr06.deeperdepths.DeeperDepthsEarlyRisers"
 		]
 	},
 	"mixins": [

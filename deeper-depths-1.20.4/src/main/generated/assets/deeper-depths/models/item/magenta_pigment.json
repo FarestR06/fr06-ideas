@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "deeper-depths:item/magenta_pigment"
+  }
+}

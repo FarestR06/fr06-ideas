@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "deeper-depths:spring_green_blazelite_block"
+    }
+  ],
+  "result": {
+    "item": "deeper-depths:spring_green_blazelite_button"
+  }
+}

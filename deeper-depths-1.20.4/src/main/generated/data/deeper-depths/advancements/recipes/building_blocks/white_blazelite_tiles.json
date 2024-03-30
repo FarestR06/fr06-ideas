@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "deeper-depths:white_blazelite_tiles"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_blazelite_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "deeper-depths:white_blazelite_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_white_blazelite_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "deeper-depths:white_blazelite_tiles"
+    ]
+  }
+}

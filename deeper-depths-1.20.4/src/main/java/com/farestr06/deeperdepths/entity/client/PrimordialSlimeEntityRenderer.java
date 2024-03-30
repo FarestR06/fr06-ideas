@@ -31,7 +31,7 @@ public class PrimordialSlimeEntityRenderer extends
     protected void scale(PrimordialSlimeEntity primordialSlimeEntity, MatrixStack matrixStack, float f) {
         // I shouldn't be copying code from Mojang, but eh...
         float g = 0.750f;
-        matrixStack.scale(0.750f, 0.750f, 0.999f);
+        matrixStack.scale(0.999f, 0.999f, 0.999f);
         matrixStack.translate(0.0f, 0.001f, 0.0f);
         float h = primordialSlimeEntity.getSize();
         float i = MathHelper.lerp(f, primordialSlimeEntity.lastStretch, primordialSlimeEntity.stretch) / (h * 0.5f + 1.0f);

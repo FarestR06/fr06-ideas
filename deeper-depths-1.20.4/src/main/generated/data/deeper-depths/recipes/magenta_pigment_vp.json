@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "magenta_pigment",
+  "ingredients": [
+    {
+      "item": "deeper-depths:violet_pigment"
+    },
+    {
+      "item": "deeper-depths:pink_pigment"
+    }
+  ],
+  "result": {
+    "item": "deeper-depths:magenta_pigment"
+  }
+}

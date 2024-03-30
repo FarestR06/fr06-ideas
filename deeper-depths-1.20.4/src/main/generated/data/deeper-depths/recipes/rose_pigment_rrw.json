@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "rose_pigment",
+  "ingredients": [
+    {
+      "item": "deeper-depths:red_pigment"
+    },
+    {
+      "item": "deeper-depths:red_pigment"
+    },
+    {
+      "item": "deeper-depths:white_pigment"
+    }
+  ],
+  "result": {
+    "item": "deeper-depths:rose_pigment"
+  }
+}

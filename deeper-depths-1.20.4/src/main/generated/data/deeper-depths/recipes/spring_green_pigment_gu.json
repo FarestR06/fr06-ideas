@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "spring_green_pigment",
+  "ingredients": [
+    {
+      "item": "deeper-depths:green_pigment"
+    },
+    {
+      "item": "deeper-depths:ultramarine_pigment"
+    }
+  ],
+  "result": {
+    "item": "deeper-depths:spring_green_pigment"
+  }
+}

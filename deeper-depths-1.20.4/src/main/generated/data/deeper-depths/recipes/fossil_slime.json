@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "deeper-depths:fossil_slime"
+    },
+    {
+      "item": "deeper-depths:fossil_slime"
+    },
+    {
+      "item": "deeper-depths:fossil_slime"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "item": "deeper-depths:blazelite_ingot"
+  }
+}

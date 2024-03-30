@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "deeper-depths:dark_gray_blazelite_block"
+    }
+  ],
+  "result": {
+    "item": "deeper-depths:dark_gray_blazelite_button"
+  }
+}

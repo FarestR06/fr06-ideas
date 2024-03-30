@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "chartreuse_pigment",
+  "ingredients": [
+    {
+      "item": "deeper-depths:yellow_pigment"
+    },
+    {
+      "item": "deeper-depths:green_pigment"
+    }
+  ],
+  "result": {
+    "item": "deeper-depths:chartreuse_pigment"
+  }
+}

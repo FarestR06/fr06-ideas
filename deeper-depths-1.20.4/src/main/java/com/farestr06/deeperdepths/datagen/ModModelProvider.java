@@ -44,6 +44,24 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.FOSSIL_SLIME, Models.GENERATED);
         itemModelGenerator.register(ModItems.PRIMORDIAL_SLIME_SPAWN_EGG, new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.BLAZELITE_INGOT, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.WHITE_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.LIGHT_GRAY_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DARK_GRAY_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RED_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ORANGE_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.YELLOW_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHARTREUSE_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GREEN_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SPRING_GREEN_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CYAN_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CAPRI_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ULTRAMARINE_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.VIOLET_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.MAGENTA_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PINK_PIGMENT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ROSE_PIGMENT, Models.GENERATED);
     }
 
     private static void generateBlazeliteModels(BlockStateModelGenerator blockStateModelGenerator) {

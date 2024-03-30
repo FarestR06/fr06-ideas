@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "deeper-depths:blazelite_block",
+    "deeper-depths:capri_blazelite_block",
+    "deeper-depths:chartreuse_blazelite_block",
+    "deeper-depths:cyan_blazelite_block",
+    "deeper-depths:dark_gray_blazelite_block",
+    "deeper-depths:green_blazelite_block",
+    "deeper-depths:light_gray_blazelite_block",
+    "deeper-depths:magenta_blazelite_block",
+    "deeper-depths:orange_blazelite_block",
+    "deeper-depths:pink_blazelite_block",
+    "deeper-depths:red_blazelite_block",
+    "deeper-depths:rose_blazelite_block",
+    "deeper-depths:spring_green_blazelite_block",
+    "deeper-depths:ultramarine_blazelite_block",
+    "deeper-depths:violet_blazelite_block",
+    "deeper-depths:white_blazelite_block",
+    "deeper-depths:yellow_blazelite_block"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "deeper-depths:capri_blazelite_block"
+    }
+  ],
+  "result": {
+    "item": "deeper-depths:capri_blazelite_button"
+  }
+}
